@@ -1,0 +1,142 @@
+# -*- coding: utf-8 -*-
+import codecs
+import json
+import os
+import xmltodict
+from utils import print_progress
+
+
+# from xml.etree import ElementTree as ET
+
+
+def process_contracts():
+    for folder in os.listdir("contracts"):
+        try:
+            process_contract("contracts/{}/es".format(folder))
+            process_contract("contracts/{}/eu".format(folder))
+        except NotADirectoryError:
+            pass
+
+
+def post_process_contract(raw_contract_json):
+    contract_json = {}
+
+    contract = raw_contract_json["contractingAnnouncement"]["contracting"]
+
+    contract_json["title"] = contract.get("subject", {}).get("#text", "")
+    contract_json["authority"] = (
+        contract.get("contractingAuthority", {}).get("name", {}).get("#text", "")
+    )
+    contract_json["budget"] = contract.get("budgetWithVAT", {}).get("#text", "")
+    contract_json["status"] = contract.get("processingStatus", {}).get("#text", "")
+    contract_json["contract_type"] = contract.get("contractingType", {}).get(
+        "#text", ""
+    )
+    contract_json["processing_type"] = contract.get("processing", {}).get("#text", "")
+    contract_json["adjudication_procedure"] = contract.get(
+        "adjudicationProcedure", {}
+    ).get("#text", "")
+
+    flags = {flag["@id"]: flag["#text"] for flag in contract["flags"]["flag"]}
+    contract_json.update(flags)
+
+    offers = contract.get("offersManagement", {}).get("offerManagement", {})
+    if offers:
+        if isinstance(offers, dict):
+            offers = [offers]
+
+        contract_json["offerers"] = [
+            {
+                "name": offer.get("name", {}).get("#text", ""),
+                "cif": offer.get("cif", {}).get("#text", ""),
+                "sme": offer.get("pyme", {}).get("#text", ""),
+                "date": offer.get("registerDate", {}).get("#text", ""),
+            }
+            for offer in offers
+        ]
+    else:
+        contract_json["offerers"] = []
+
+    formalizations = (
+        contract.get("formalizations", {})
+        and contract.get("formalizations", {}).get("formalization", {})
+        or {}
+    )
+
+    if formalizations:
+        if isinstance(formalizations, dict):
+            formalizations = [formalizations]
+        for i, formalization in enumerate(formalizations):
+            contract_json[f"winner_{i}"] = {
+                "cif": formalization["id"]["#text"],
+                "name": formalization["businessName"]["#text"],
+            }
+    else:
+        contract_json["winner"] = None
+
+    resolutions = (
+        contract.get("resolutions", {})
+        and contract.get("resolutions", {}).get("resolution", {})
+        or {}
+    )
+    if resolutions:
+        if isinstance(resolutions, dict):
+            resolutions = [resolutions]
+        for i, resolution in enumerate(resolutions):
+            contract_json[f"resolution_{i}"] = {
+                "priceWithVAT": float(
+                    resolution.get("priceWithVAT", {})
+                    .get("#text", "0")
+                    .replace(".", "")
+                    .replace(",", ".")
+                )
+            }
+
+    contract_json["id"] = raw_contract_json["id"]
+
+    return contract_json
+
+
+def process_contract(folder):
+    metadata_filename = "{}/metadata.xml".format(folder)
+    data_filename = "{}/data.xml".format(folder)
+    json_filename = "{}/data.json".format(folder)
+
+    raw_contract_json = build_dict(metadata_filename, data_filename, json_filename)
+    raw_contract_json["id"] = folder.split("/")[-2]
+
+    with open("{}/raw_contract.json".format(folder), "w") as fp:
+        json.dump(raw_contract_json, fp, indent=4)
+
+    contract_json = post_process_contract(raw_contract_json)
+
+    with open("{}/contract.json".format(folder), "w") as fp:
+        json.dump(contract_json, fp, indent=4)
+
+
+def build_dict(metadata_filename, data_filename, json_filename):
+
+    with codecs.open(data_filename, "r", "iso-8859-15") as fp:
+        result = xmltodict.parse(fp.read())
+
+    return result
+
+
+def process_item(xmlitem):
+    key = xmlitem.get("name")
+    subitems = xmlitem.findall("value/item")
+    if subitems:
+        results = {}
+        for subitem in subitems:
+            results.update(process_item(subitem))
+        return {key: results}
+    else:
+        value = xmlitem.findall("value")
+        if value:
+            return {key: value[0].text}
+
+    return {}
+
+
+if __name__ == "__main__":
+    process_contracts()
