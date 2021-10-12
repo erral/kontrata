@@ -55,6 +55,11 @@ Run each of the scripts of the pipeline.
 
 - Index all contracts in elastic
 
+
+## Work in progress
+
+This is a work in progress. The JSON file generated in the 2nd step (and then indexed in the 3rd step) is subject to change.
+
 ## License
 
 GPLv3
