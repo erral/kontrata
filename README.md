@@ -57,4 +57,4 @@ Run each of the scripts of the pipeline.
 
 ## License
 
-GPLv2
+GPLv3
