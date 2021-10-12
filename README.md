@@ -5,6 +5,33 @@ Platform (REVASCON)](https://www.contratacion.euskadi.eus/w32-kpereva/es/y46aRev
 
 This project has been inspired by [@JaimeObregon](https://twitter.com/JaimeObregon) and [contratoscantabria.es](https://contratosdecantabria.es/)
 
+## Install
+
+You need a recent python version, any version >= 3.7 will do.
+
+Clone this project and create a virtualenv inside it:
+
+``` 
+
+python3 -m venv .
+
+``` 
+
+Then install the required dependencies:
+
+``` 
+./bin/pip install -r requirements.txt
+```
+
+Run each of the scripts of the pipeline.
+
+```
+
+./bin/python 01-get_contracts.py
+./bin/python 02-process_contracts.py
+./bin/python 03-index_contracts.py
+```
+
 ## Pipeline
 
 1. 01-get_contracts.py
@@ -27,3 +54,7 @@ This project has been inspired by [@JaimeObregon](https://twitter.com/JaimeObreg
 3. 03-index_contracts.py
 
 - Index all contracts in elastic
+
+## License
+
+GPLv2
