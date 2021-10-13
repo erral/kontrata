@@ -4,10 +4,12 @@ import json
 import os
 import xmltodict
 from utils import print_progress
-
+from xml.parsers.expat import ExpatError
 
 # from xml.etree import ElementTree as ET
 
+class WrongXMLFileFormat(Exception):
+    """ Exception to raise when the XML file is in a wrong format """
 
 def process_contracts():
     for folder in os.listdir("contracts"):
@@ -28,6 +30,10 @@ def clean_float_value(value):
 
 def post_process_contract(raw_contract_json):
     contract_json = {}
+
+    if 'contractingAnnouncement' not in raw_contract_json:
+        raise WrongXMLFileFormat
+
 
     contract = raw_contract_json["contractingAnnouncement"]["contracting"]
 
@@ -117,10 +123,14 @@ def process_contract(folder):
         with open("{}/raw_contract.json".format(folder), "w") as fp:
             json.dump(raw_contract_json, fp, indent=4)
 
-        contract_json = post_process_contract(raw_contract_json)
+        try:
+            contract_json = post_process_contract(raw_contract_json)
 
-        with open("{}/contract.json".format(folder), "w") as fp:
-            json.dump(contract_json, fp, indent=4)
+            with open("{}/contract.json".format(folder), "w") as fp:
+                json.dump(contract_json, fp, indent=4)
+
+        except WrongXMLFileFormat:
+            print(f'ERROR: This file has a wrong format: {data_filename}')
     else:
         print(f"File not found: {data_filename}")
 
@@ -132,6 +142,8 @@ def build_dict(metadata_filename, data_filename, json_filename):
 
         return result
     except FileNotFoundError:
+        return {} 
+    except ExpatError:
         return {}
 
 
