@@ -1,4 +1,14 @@
 # -*- coding: utf-8 -*-
+"""
+
+Data extracted from:
+
+https://opendata.euskadi.eus/catalogo/-/contrataciones-administrativas-del-2021/
+
+https://opendata.euskadi.eus/katalogoa/-/2021eko-kontratazio-administratiboak/
+
+"""
+
 import requests
 import json
 import os
