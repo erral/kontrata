@@ -131,7 +131,7 @@ def get_contracts(update):
         parse_multilingual_contract(contract_id, contract, update)
         COUNT += 1
         print(f"Downloaded item count:  {COUNT}")
-        if REALLY_DOWNLOADED and REALLY_DOWNLOADED % LIMIT == 1:
+        if REALLY_DOWNLOADED and REALLY_DOWNLOADED % LIMIT == 0:
             print("Sleeping for 10 seconds")
             import time
 
