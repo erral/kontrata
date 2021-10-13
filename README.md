@@ -32,6 +32,12 @@ Run each of the scripts of the pipeline.
 ./bin/python 03-index_contracts.py
 ```
 
+## Elastic
+
+All the data produced in the 2nd step will be indexed in an [Elastic](https://www.elastic.co/es/) service. You will need such a service to run the indexing part.
+
+Have a look at the [sample elastic docker-compose installation](https://github.com/erral/kontrata-docker) that I am using on development.
+
 ## Pipeline
 
 1. 01-get_contracts.py
