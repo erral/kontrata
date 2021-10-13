@@ -39,8 +39,9 @@ def index_contracts():
 def index_contract(folder):
     contract_filename = f"{folder}/contract.json"
 
-    with open(contract_filename, "r") as fp:
-        index_doc(json.load(fp))
+    if os.path.exists(contract_filename):
+        with open(contract_filename, "r") as fp:
+            index_doc(json.load(fp))
 
 
 if __name__ == "__main__":
