@@ -203,12 +203,15 @@ def build_dict(metadata_filename, data_filename, json_filename):
 
 
 def parse_old_xml(text):
-    items = ET.fromstring(text).findall("item")
-    result = {}
-    for item in items:
-        result.update(process_item(item))
+    try:
+        items = ET.fromstring(text).findall("item")
+        result = {}
+        for item in items:
+            result.update(process_item(item))
 
-    return result
+        return result
+    except ET.ParseError:
+        return {}
 
 
 def process_item(xmlitem):
