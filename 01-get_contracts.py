@@ -19,7 +19,10 @@ import argparse
 CONTRACTS_JSON_URL_EU = "https://opendata.euskadi.eus/contenidos/ds_contrataciones/contrataciones_admin_2021/opendata/kontratuak.json"
 CONTRACTS_JSON_URL_ES = "https://opendata.euskadi.eus/contenidos/ds_contrataciones/contrataciones_admin_2021/opendata/contratos.json"
 
-LIMIT = 1000
+LIMIT = 30
+
+REALLY_DOWNLOADED = 0
+COUNT = 0
 
 
 class IDNotFoundError(Exception):
@@ -133,12 +136,17 @@ def get_contracts(update):
     contracts_eu = get_contracts_from_json(CONTRACTS_JSON_URL_EU)
     contracts = merge_contracts(contracts_es, contracts_eu)
 
-    count = 0
+    global COUNT
+    COUNT = 0
     for contract_id, contract in contracts.items():
         parse_multilingual_contract(contract_id, contract, update)
-        count += 1
-        if count == LIMIT:
-            break
+        COUNT += 1
+        print(f"Downloaded item count:  {COUNT}")
+        if REALLY_DOWNLOADED and REALLY_DOWNLOADED % LIMIT == 1:
+            print("Sleeping for 10 seconds")
+            import time
+
+            time.sleep(10)
 
 
 if __name__ == "__main__":
