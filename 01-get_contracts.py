@@ -90,15 +90,7 @@ def parse_contract(contract_id, language, contract, update=False):
             f.write(json.dumps(contract))
 
 
-@print_progress
 def build_contracts_dict(contracts, language):
-
-    # contracts_dict = {}
-    # for contract_es in contracts:
-    #     contract_id = get_contract_id(contract_es)
-    #     contracts_dict[contract_id] = {language: contract_es}
-
-    # return contracts_dict
 
     return {
         get_contract_id(contract_es): {language: contract_es}
@@ -106,7 +98,6 @@ def build_contracts_dict(contracts, language):
     }
 
 
-@print_progress
 def merge_dicts(dict1, dict2):
     for key in dict2:
         if key in dict1:
@@ -116,9 +107,7 @@ def merge_dicts(dict1, dict2):
     return dict1
 
 
-@print_progress
 def merge_contracts(contracts_es, contracts_eu):
-
     contracts = merge_dicts(
         build_contracts_dict(contracts_es, "es"),
         build_contracts_dict(contracts_eu, "eu"),
