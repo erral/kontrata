@@ -6,10 +6,12 @@ import xmltodict
 from utils import print_progress
 from xml.parsers.expat import ExpatError
 
-# from xml.etree import ElementTree as ET
+from xml.etree import ElementTree as ET
+
 
 class WrongXMLFileFormat(Exception):
-    """ Exception to raise when the XML file is in a wrong format """
+    """Exception to raise when the XML file is in a wrong format"""
+
 
 def process_contracts():
     for folder in os.listdir("contracts"):
@@ -28,12 +30,62 @@ def clean_float_value(value):
         return 0.0
 
 
+def post_process_old_contract(raw_contract_json):
+    contract_json = {}
+    contract = raw_contract_json["contratacion"]
+
+    contract_json["title"] = contract.get("contratacion_titulo_contrato", "")
+    contract_json["authority"] = contract.get(
+        "contratacion_autoridad_contratacion", {}
+    ).get("valor", "")
+    contract_json["budget"] = 0
+    contract_json["status"] = contract.get("contratacion_estado_contrato", {}).get(
+        "valor", ""
+    )
+    contract_json["contract_type"] = contract.get("contratacion_tipo_contrato", {}).get(
+        "valor", ""
+    )
+    contract_json["processing_type"] = contract.get("contratacion_tramitacion", {}).get(
+        "valor", ""
+    )
+
+    # flags = {}
+    # contract_json.update(flags)
+    offerers = contract.get("licitadores")
+    if offerers:
+        import pdb
+
+        pdb.set_trace()
+        contract_json["offerers"] = [
+            {
+                "name": "",
+                "cif": "",
+                "sme": "",
+                "date": "",
+            }
+            for offer in offerers
+        ]
+    else:
+        contract_json["offerers"] = []
+
+    formalizations = contract.get("contratacion_informe_adjudicacion_definitiva", {})
+    for item in sorted(formalizations.keys()):
+        formalization = formalizations[item]
+        contract_json[f"winner_{item}"] = {
+            "cif": "",
+            "name": formalization.get("empresa", ""),
+        }
+        contract_json[f"resolution_{item}"] = {
+            "priceWithVAT": clean_float_value(formalization.get("precioIVA", "")),
+        }
+
+    contract_json["id"] = raw_contract_json["id"]
+
+    return contract_json
+
+
 def post_process_contract(raw_contract_json):
     contract_json = {}
-
-    if 'contractingAnnouncement' not in raw_contract_json:
-        raise WrongXMLFileFormat
-
 
     contract = raw_contract_json["contractingAnnouncement"]["contracting"]
 
@@ -123,14 +175,16 @@ def process_contract(folder):
         with open("{}/raw_contract.json".format(folder), "w") as fp:
             json.dump(raw_contract_json, fp, indent=4)
 
-        try:
+        # We have 2 different formats for the data.xml file
+        if "contractingAnnouncement" in raw_contract_json:
             contract_json = post_process_contract(raw_contract_json)
 
-            with open("{}/contract.json".format(folder), "w") as fp:
-                json.dump(contract_json, fp, indent=4)
+        else:
+            contract_json = post_process_old_contract(raw_contract_json)
 
-        except WrongXMLFileFormat:
-            print(f'ERROR: This file has a wrong format: {data_filename}')
+        with open("{}/contract.json".format(folder), "w") as fp:
+            json.dump(contract_json, fp, indent=4)
+
     else:
         print(f"File not found: {data_filename}")
 
@@ -138,13 +192,26 @@ def process_contract(folder):
 def build_dict(metadata_filename, data_filename, json_filename):
     try:
         with codecs.open(data_filename, "r", "iso-8859-15") as fp:
-            result = xmltodict.parse(fp.read())
+            text = fp.read()
+            if "contractingAnnouncement" in text:
+                result = xmltodict.parse(text)
+            else:
+                result = parse_old_xml(text)
 
         return result
     except FileNotFoundError:
-        return {} 
+        return {}
     except ExpatError:
         return {}
+
+
+def parse_old_xml(text):
+    items = ET.fromstring(text).findall("item")
+    result = {}
+    for item in items:
+        result.update(process_item(item))
+
+    return result
 
 
 def process_item(xmlitem):
