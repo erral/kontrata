@@ -104,29 +104,35 @@ def post_process_contract(raw_contract_json):
     return contract_json
 
 
+@print_progress
 def process_contract(folder):
     metadata_filename = "{}/metadata.xml".format(folder)
     data_filename = "{}/data.xml".format(folder)
     json_filename = "{}/data.json".format(folder)
 
     raw_contract_json = build_dict(metadata_filename, data_filename, json_filename)
-    raw_contract_json["id"] = folder.split("/")[-2]
+    if raw_contract_json:
+        raw_contract_json["id"] = folder.split("/")[-2]
 
-    with open("{}/raw_contract.json".format(folder), "w") as fp:
-        json.dump(raw_contract_json, fp, indent=4)
+        with open("{}/raw_contract.json".format(folder), "w") as fp:
+            json.dump(raw_contract_json, fp, indent=4)
 
-    contract_json = post_process_contract(raw_contract_json)
+        contract_json = post_process_contract(raw_contract_json)
 
-    with open("{}/contract.json".format(folder), "w") as fp:
-        json.dump(contract_json, fp, indent=4)
+        with open("{}/contract.json".format(folder), "w") as fp:
+            json.dump(contract_json, fp, indent=4)
+    else:
+        print(f"File not found: {data_filename}")
 
 
 def build_dict(metadata_filename, data_filename, json_filename):
+    try:
+        with codecs.open(data_filename, "r", "iso-8859-15") as fp:
+            result = xmltodict.parse(fp.read())
 
-    with codecs.open(data_filename, "r", "iso-8859-15") as fp:
-        result = xmltodict.parse(fp.read())
-
-    return result
+        return result
+    except FileNotFoundError:
+        return {}
 
 
 def process_item(xmlitem):
