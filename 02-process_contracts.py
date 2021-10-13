@@ -52,10 +52,7 @@ def post_process_old_contract(raw_contract_json):
     # flags = {}
     # contract_json.update(flags)
     offerers = contract.get("licitadores")
-    if offerers:
-        import pdb
-
-        pdb.set_trace()
+    if isinstance(offerers, list):
         contract_json["offerers"] = [
             {
                 "name": "",
