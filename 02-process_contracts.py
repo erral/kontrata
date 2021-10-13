@@ -18,6 +18,14 @@ def process_contracts():
             pass
 
 
+def clean_float_value(value):
+    try:
+        new_value = value.replace(".", "").replace(",", ".")
+        return float(new_value)
+    except:
+        return 0.0
+
+
 def post_process_contract(raw_contract_json):
     contract_json = {}
 
@@ -27,7 +35,9 @@ def post_process_contract(raw_contract_json):
     contract_json["authority"] = (
         contract.get("contractingAuthority", {}).get("name", {}).get("#text", "")
     )
-    contract_json["budget"] = contract.get("budgetWithVAT", {}).get("#text", "")
+    contract_json["budget"] = clean_float_value(
+        contract.get("budgetWithVAT", {}).get("#text", "0")
+    )
     contract_json["status"] = contract.get("processingStatus", {}).get("#text", "")
     contract_json["contract_type"] = contract.get("contractingType", {}).get(
         "#text", ""
@@ -84,11 +94,8 @@ def post_process_contract(raw_contract_json):
             resolutions = [resolutions]
         for i, resolution in enumerate(resolutions):
             contract_json[f"resolution_{i}"] = {
-                "priceWithVAT": float(
-                    resolution.get("priceWithVAT", {})
-                    .get("#text", "0")
-                    .replace(".", "")
-                    .replace(",", ".")
+                "priceWithVAT": clean_float_value(
+                    resolution.get("priceWithVAT", {}).get("#text", "0")
                 )
             }
 
