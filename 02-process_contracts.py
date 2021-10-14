@@ -44,7 +44,9 @@ def post_process_old_contract(raw_contract_json):
     contract_json["title"] = contract.get("contratacion_titulo_contrato", "")
     contract_json["authority"] = contract.get(
         "contratacion_autoridad_contratacion", {}
-    ).get("valor", "")
+    ).get("valor", "") or contract.get("contratacion_poder_adjudicador", {}).get(
+        "valor", ""
+    )
     contract_json["budget"] = 0
     contract_json["status"] = contract.get("contratacion_estado_contrato", {}).get(
         "valor", ""
