@@ -24,6 +24,13 @@ def process_contracts():
 
 def clean_float_value(value):
     try:
+        return float(value)
+    except:
+        return 0.0
+
+
+def clean_float_value_old_xml(value):
+    try:
         new_value = value.replace(".", "").replace(",", ".")
         return float(new_value)
     except:
@@ -73,7 +80,9 @@ def post_process_old_contract(raw_contract_json):
             "name": formalization.get("empresa", ""),
         }
         contract_json[f"resolution_{item}"] = {
-            "priceWithVAT": clean_float_value(formalization.get("precioIVA", "")),
+            "priceWithVAT": clean_float_value_old_xml(
+                formalization.get("precioIVA", "")
+            ),
         }
 
     contract_json["id"] = raw_contract_json["id"]
@@ -90,7 +99,7 @@ def post_process_contract(raw_contract_json):
     contract_json["authority"] = (
         contract.get("contractingAuthority", {}).get("name", {}).get("#text", "")
     )
-    contract_json["budget"] = clean_float_value(
+    contract_json["budget"] = clean_float_value_old_xml(
         contract.get("budgetWithVAT", {}).get("#text", "0")
     )
     contract_json["status"] = contract.get("processingStatus", {}).get("#text", "")
