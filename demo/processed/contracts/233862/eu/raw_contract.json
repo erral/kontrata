@@ -1,0 +1,1264 @@
+{
+    "contractingAnnouncement": {
+        "@id": "expjaso233862",
+        "@lang": "eu",
+        "url": "/w32-content/eu/contenidos/anuncio_contratacion/expjaso233862/eu/expjaso233862.html",
+        "language": "eu",
+        "contracting": {
+            "@id": "589873",
+            "idExpOrigen": {
+                "@desc": "Espedientea",
+                "#text": "233862"
+            },
+            "logo": "/contenidos/poder_adjudicador/poder1/es_doc/images/w32_logoGobiernoVasco.gif",
+            "pdf": {
+                "@desc": "Inprimatu",
+                "#text": "/contenidos/anuncio_contratacion/expjaso233862/eu_doc/adjuntos/fichaExpediente.pdf"
+            },
+            "sello": {
+                "@desc": "Denbora-zigilua",
+                "#text": "/ac70cPublicidadWar/sello/233862/eu"
+            },
+            "urlTodosFicheros": {
+                "@desc": "Fitxategiak deskargatu",
+                "#text": "descargarFicheroPID(233862, 78)"
+            },
+            "urlFicherosModelo": {
+                "@desc": "Ereduak deskargatu",
+                "#text": "descargarFicheroPID(233862, 109)"
+            },
+            "urlSuscripciones": {
+                "@desc": "Iragarki-alertak harpidetu",
+                "#text": "/ac70cPublicidadWar/suscripcionAnuncios?origenPublicado=1&origenExpediente=233862"
+            },
+            "urlSuscripcionesPoder": "/ac70cPublicidadWar/suscripcionPoder/entrada/1",
+            "firstPublicationDate": {
+                "@desc": "Argitaratze-data",
+                "#text": "2021/09/10 08:50"
+            },
+            "budgetEstimated": {
+                "@desc": "Zenbatetsitako balioa",
+                "#text": "2.596,15"
+            },
+            "budgetWithoutVAT": {
+                "@desc": "Kontratuaren aurrekontua, BEZik gabe",
+                "#text": "2.596,15"
+            },
+            "codExp": {
+                "@desc": "Espedientea",
+                "#text": "KM/2019/057/054"
+            },
+            "budgetWithVAT": {
+                "@desc": "Kontratuaren aurrekontua, BEZa barne",
+                "#text": "2.700"
+            },
+            "contractPeriod": {
+                "@desc": "Epea",
+                "#text": "22"
+            },
+            "contractPeriodType": {
+                "@id": "2",
+                "@desc": "Kontratuaren iraupena",
+                "#text": "Egunak"
+            },
+            "offerMaintenancePeriodType": {
+                "@id": "4",
+                "@desc": "Lizitatzaileak eskaintzari eutsi behar dion gutxieneko epea",
+                "#text": "Hilabeteak"
+            },
+            "offerMaintenancePeriod": {
+                "@desc": "(eskaintzak jasotzen direnetik)",
+                "#text": "2"
+            },
+            "processingStatus": {
+                "@id": "FO",
+                "@desc": "Izapidetzearen egoera",
+                "#text": "Formalizatuta / Gauzatzen"
+            },
+            "webPageTender": {
+                "@desc": "Lizitazio elektronikoa egiteko web orria",
+                "#text": "https://www.contratacion.euskadi.eus/KPELicitacion"
+            },
+            "contractingAuthority": {
+                "@id": "1",
+                "name": {
+                    "@desc": "Botere adjudikatzailea",
+                    "#text": "Eusko Jaurlaritza"
+                },
+                "nutsCode": {
+                    "@desc": "NUTS kodea",
+                    "#text": "ES21"
+                },
+                "address": {
+                    "@desc": "Posta helbidea",
+                    "#text": "Donostia-San Sebasti\u00e1n, 1 01010 Vitoria-Gasteiz"
+                },
+                "webPage": {
+                    "@desc": "Web-helbidea",
+                    "#text": "http://www.euskadi.eus"
+                }
+            },
+            "entityDriving": {
+                "@id": "1240",
+                "name": {
+                    "@desc": "Erakunde sustatzailea",
+                    "#text": "S4833001C - Gobernantza Publikoa eta Autogobernua"
+                },
+                "address": {
+                    "@desc": "Posta-helbidea",
+                    "#text": "Donostia - San Sebasti\u00e1n, 101010 Vitoria - Gasteiz"
+                }
+            },
+            "contractingBody": {
+                "@id": "914249",
+                "name": {
+                    "@desc": "Kontratazio-organoa",
+                    "#text": "Administrazio eta Zerbitzu Orokorretako Sailburuordetza"
+                }
+            },
+            "technicalContactInfo": {
+                "@desc": "Harreman teknikoa",
+                "info": {
+                    "name": {
+                        "@desc": "Izen-abizenak",
+                        "#text": "-Irune Zumalde"
+                    },
+                    "address": {
+                        "@desc": "Helbidea",
+                        "#text": "Donostia - San Sebasti\u00e1n, 101010 Vitoria - Gasteiz"
+                    },
+                    "webPage": {
+                        "@desc": "Web-helbidea",
+                        "#text": "https://www.contratacion.euskadi.eus"
+                    },
+                    "email": {
+                        "@desc": "Helbide elektronikoa",
+                        "#text": "i-zumalde@euskadi.eus"
+                    },
+                    "phone": {
+                        "@desc": "Telefonoa",
+                        "#text": "+34 945018558"
+                    }
+                }
+            },
+            "adminContactInfo": {
+                "@desc": "Administrazio-harremana",
+                "info": {
+                    "name": {
+                        "@desc": "Izen-abizenak",
+                        "#text": "Marian Esteban"
+                    },
+                    "address": {
+                        "@desc": "Helbidea",
+                        "#text": "Donostia-San Sebasti\u00e1n, 1 01010 Vitoria-Gasteiz"
+                    },
+                    "email": {
+                        "@desc": "Helbide elektronikoa",
+                        "#text": "a-estebanroyo@euskadi.eus"
+                    },
+                    "phone": {
+                        "@desc": "Telefonoa",
+                        "#text": "+34 945018823"
+                    }
+                }
+            },
+            "presentationPlaces": {
+                "@desc": "Eskaintzak eta parte hartzeko eskaerak aurkezteko lekua",
+                "placeInfo": {
+                    "address": {
+                        "@desc": "Helbidea",
+                        "#text": "Donostia - San Sebasti\u00e1n, 101010 Vitoria - Gasteiz"
+                    },
+                    "webPage": {
+                        "@desc": "Web-helbidea",
+                        "#text": "https://www.contratacion.euskadi.eus"
+                    },
+                    "phone": {
+                        "@desc": "Telefonoa",
+                        "#text": "+34 945018558"
+                    }
+                }
+            },
+            "contractingTableComponents": {
+                "@desc": "Mahai/batzordeko kidea",
+                "contact": [
+                    {
+                        "@id": "3874.0",
+                        "name": {
+                            "@desc": "Izena",
+                            "#text": "Aitor Bilbao Uribarri"
+                        },
+                        "function": {
+                            "@desc": "Funtzioa",
+                            "#text": "Idazkari"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa",
+                            "#text": "a-bilbaouribarri@euskadi.eus"
+                        }
+                    },
+                    {
+                        "@id": "3875.0",
+                        "name": {
+                            "@desc": "Izena",
+                            "#text": "Oihana Chantre Agirre"
+                        },
+                        "function": {
+                            "@desc": "Funtzioa",
+                            "#text": "Ordezko"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa",
+                            "#text": "o-chantre@euskadi.eus"
+                        }
+                    },
+                    {
+                        "@id": "3877.0",
+                        "name": {
+                            "@desc": "Izena",
+                            "#text": "Marian Esteban Royo"
+                        },
+                        "function": {
+                            "@desc": "Funtzioa",
+                            "#text": "Besterik"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa",
+                            "#text": "a-estebanroyo@euskadi.eus"
+                        }
+                    },
+                    {
+                        "@id": "3876.0",
+                        "name": {
+                            "@desc": "Izena",
+                            "#text": "Javier Dominguez Atxalandabaso"
+                        },
+                        "function": {
+                            "@desc": "Funtzioa",
+                            "#text": "Besterik"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa",
+                            "#text": "javier-dominguez@euskadi.eus"
+                        }
+                    }
+                ]
+            },
+            "documentAccessPeople": {
+                "@desc": "Dokumentaziora sarbidea duten beste pertsona batzuk",
+                "contact": {
+                    "@id": "3878.0",
+                    "name": {
+                        "@desc": "Izena",
+                        "#text": "Libe Urigoitia Capanaga"
+                    },
+                    "function": {
+                        "@desc": "Funtzioa",
+                        "#text": "Besterik"
+                    },
+                    "email": {
+                        "@desc": "Helbide elektronikoa",
+                        "#text": "l-urigoitia@euskadi.eus"
+                    }
+                }
+            },
+            "resourceBodies": {
+                "@desc": "Errekurtso-organoa",
+                "resourceBody": {
+                    "name": {
+                        "@desc": "Deskribapena",
+                        "#text": "Kontratuen inguruko Errekurtsuen Administrazio Organoa"
+                    },
+                    "locality": {
+                        "@desc": "Herria",
+                        "#text": "Vitoria-Gasteiz"
+                    },
+                    "email": {
+                        "@desc": "Helbide elektronikoa",
+                        "#text": "oarc@euskadi.eus"
+                    },
+                    "main": {
+                        "@desc": "Nagusia",
+                        "#text": "true"
+                    }
+                }
+            },
+            "contractingType": {
+                "@id": "2",
+                "@desc": "Kontratu mota",
+                "#text": "Zerbitzuak"
+            },
+            "subject": {
+                "@desc": "Kontratuaren xedea",
+                "#text": "115-Espektro autistaren nahasmenduak: detekzioari, diagnostikoari eta tratamenduari buruzko ebidentzia zientifikoa / 116-Pediatriako arnas zailtasunak tratatzeko fluxu handiko oxigeoterapiaren eraginkortasuna"
+            },
+            "cpvs": {
+                "@desc": "CPVak",
+                "cpv": {
+                    "@id": "79800000-2",
+                    "name": {
+                        "@desc": "CPV",
+                        "#text": "Inprimatze-zerbitzuak eta horiei lotutakoak"
+                    },
+                    "main": {
+                        "@desc": "Nagusia",
+                        "#text": "true"
+                    }
+                }
+            },
+            "placeExecutionInEU": {
+                "@desc": "Gauzatze-leku nagusia EBn",
+                "#text": "true"
+            },
+            "placeExecutionNUTS": {
+                "@desc": "Gauzatze-leku nagusiaren NUTS kodeak",
+                "placeExecution": {
+                    "@id": "ES211",
+                    "code": {
+                        "@desc": "NUTS kodea",
+                        "#text": "ES211"
+                    },
+                    "name": {
+                        "@desc": "Deskribapena",
+                        "#text": "Araba/\u00c1lava"
+                    },
+                    "main": {
+                        "@desc": "Nagusia",
+                        "#text": "true"
+                    }
+                }
+            },
+            "flags": {
+                "flag": [
+                    {
+                        "@id": "contrato_menor",
+                        "@desc": "Kontratu txikia",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contrato_covid19",
+                        "@desc": "Covid-19aren kudeaketarako kontratua",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "plan_recuperacion",
+                        "@desc": "Suspertze, Eraldaketa eta Erresilientzia Plana",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "recurso",
+                        "@desc": "Recurso",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "licitacion_electronica",
+                        "@desc": "Lizitazio elektronikoa",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "licitacion_electronica_kontratazioa",
+                        "@desc": "KPE lizitazioa",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "otros_compradores_sd",
+                        "@desc": "Beste erosle batzuek erabil dezakete eskuratze-sistema dinamikoa",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "central_compras",
+                        "@desc": "Erosketa-zentral batek adjudikatzen du kontratua",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contrato_cubierto_acp",
+                        "@desc": "Kontratazio Publikoari buruzko Akordioaren babespean dagoen kontratua",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "division_lotes",
+                        "@desc": "Sortaka zatitzea",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "variantes",
+                        "@desc": "Aldaerak onartzen dira",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "informe_opciones",
+                        "@desc": "Aukerak onartzen dira",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "precios_unitarios",
+                        "@desc": "Prezio unitarioak",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "prorroga",
+                        "@desc": "Luzapenak",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "reservado_profesion",
+                        "@desc": "Zerbitzua ematea lanbide jakin baten esku uzten da",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "situacion_economica_financiera",
+                        "@desc": "Kaudimen ekonomiko eta finantzarioa kontratazio-pleguetan adierazita",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "capacidad_tecnica_profesional",
+                        "@desc": "Kaudimen-irizpideak kontratazio-pleguetan ageri dira",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "subasta_electronica",
+                        "@desc": "Enkante elektronikoa erabiliko da",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "presentacion_ofertas_catalogo_electronico",
+                        "@desc": "Eskaintzak katalogo elektroniko gisa aurkeztu behar dira, edo katalogo elektroniko bat eduki behar dute",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "reservado_talleres",
+                        "@desc": "Lantegi babestuetarako erreserbatua",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "programa_empleo",
+                        "@desc": "Enplegu babestuko programa batean egikaritzeko",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "obligacion_nombres_cualificaciones",
+                        "@desc": "Nahitaezkoa da kontratua betearazteko adjudikatutako langileen izenak eta lanbide-kualifikazioak ematea",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contrato_periodico",
+                        "@desc": "Aldizkako kontratuak dira",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "pedido_electronico",
+                        "@desc": "Eskari elektronikoa erabiliko da.",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "facturacion_electronica",
+                        "@desc": "Fakturazio elektronikoa onartuko da",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "pago_electronico",
+                        "@desc": "Ordainketa elektronikoa erabiliko da",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "financiado_ue",
+                        "@desc": "EBren funtsekin finantzatuta",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "garantia_provisional",
+                        "@desc": "Behin-behineko bermea",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "garantia_definitiva",
+                        "@desc": "Behin betiko bermea",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "publicar_perfil_contratante",
+                        "@desc": "Kontratatzailearen profilean argitaratu",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "publicar_doue",
+                        "@desc": "Automatikoki argitaratu EBAOn",
+                        "#text": "false"
+                    }
+                ]
+            },
+            "processing": {
+                "@id": "1",
+                "@desc": "Tramitazioa",
+                "#text": "Arrunta"
+            },
+            "adjudicationProcedure": {
+                "@id": "8",
+                "@desc": "Adjudikazio-prozedura",
+                "#text": "Negoziatua Publizitaterik Gabe"
+            },
+            "adjudicationCriteria": {
+                "@id": "2",
+                "@desc": "Adjudikatzeko irizpideak",
+                "#text": "Preziorik onena"
+            },
+            "languages": {
+                "@desc": "Eskaintzak edo parte hartzeko eskaerak aurkezteko erabil daitezkeen hizkuntzak",
+                "language": [
+                    {
+                        "code": {
+                            "@desc": "Hizkuntza",
+                            "#text": "ES"
+                        },
+                        "desc": {
+                            "@desc": "Deskribapena",
+                            "#text": "Gaztelania"
+                        }
+                    },
+                    {
+                        "code": {
+                            "@desc": "Hizkuntza",
+                            "#text": "EU"
+                        },
+                        "desc": {
+                            "@desc": "Deskribapena",
+                            "#text": "Euskara"
+                        }
+                    }
+                ]
+            },
+            "authorityType": {
+                "@id": "3",
+                "@desc": "Botere mota",
+                "#text": "Eskualdeko edo tokiko autoritatea"
+            },
+            "mainActivity": {
+                "@id": "1",
+                "@desc": "Jarduera nagusia",
+                "#text": "Zerbitzu publiko orokorrak"
+            },
+            "communication": {
+                "@id": "1",
+                "@desc": "Komunikazioa",
+                "#text": "Kontratazio pleguetara sarrera librea, zuzena, osoa eta doan"
+            },
+            "justification": {
+                "@desc": "Justifikazioa",
+                "#text": "Esparru Akordioaren barruan dagoen kontratu bat izanez ez da beharrezkoa publizitateko prozedura negoziatuta"
+            },
+            "sheetModeAccess": {
+                "@desc": "Pleguak eskuratzeko modua",
+                "#text": "https://www.contratacion.euskadi.eus/"
+            },
+            "legalProvisionReference": {
+                "@desc": "Dagokion lege-, erregelamendu- edo administrazio-xedapenaren erreferentzia"
+            },
+            "descExtensions": {
+                "@desc": "Luzapenen deskribapena"
+            },
+            "descOptions": {
+                "@desc": "Aukeren deskribapena"
+            },
+            "professionalQualification": {
+                "@desc": "Lanbide-jarduera egiteko gaikuntza, lanbide- edo merkataritza-erregistro batean inskribatzeko baldintzak barne"
+            },
+            "economicSolvencyCriterion": {
+                "@desc": "Kaudimen-irizpideen zerrenda eta deskribapen laburra"
+            },
+            "minimumEconomicLevel": {
+                "@desc": "Eska daitezkeen gutxieneko maila edo mailak (badagokio)"
+            },
+            "technicalSolvencyCriterion": {
+                "@desc": "Kaudimen-irizpideen zerrenda eta deskribapen laburra"
+            },
+            "minimumTechnicalLevel": {
+                "@desc": "Eska daitezkeen gutxieneko maila edo mailak (badagokio)"
+            },
+            "specialClauses": {
+                "@desc": "Klausula bereziak",
+                "specialClause": [
+                    {
+                        "name": {
+                            "@desc": "Mota",
+                            "#text": "Ingurumenekoak"
+                        },
+                        "applicationSites": {
+                            "applicationSite": [
+                                {
+                                    "@desc": "Esleipen Irizpideak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Egikaritzeko baldintza bereziak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Kaudimen teknikoen irizpideak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Kontratu erreserbatuak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Beste batzuk",
+                                    "#text": "false"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Mota",
+                            "#text": "Gizarte arlokoak"
+                        },
+                        "applicationSites": {
+                            "applicationSite": [
+                                {
+                                    "@desc": "Esleipen Irizpideak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Egikaritzeko baldintza bereziak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Kaudimen teknikoen irizpideak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Kontratu erreserbatuak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Beste batzuk",
+                                    "#text": "false"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Mota",
+                            "#text": "Emakume eta gizonen arteko berdintasuna"
+                        },
+                        "applicationSites": {
+                            "applicationSite": [
+                                {
+                                    "@desc": "Esleipen Irizpideak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Egikaritzeko baldintza bereziak",
+                                    "#text": "true"
+                                },
+                                {
+                                    "@desc": "Kaudimen teknikoen irizpideak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Kontratu erreserbatuak",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Beste batzuk",
+                                    "#text": "false"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "vats": {
+                "@desc": "Kontratuko aurrekontuaren BEZa(k)",
+                "vat": {
+                    "@desc": "Probako deskribapen-testua",
+                    "type": {
+                        "@desc": "BEZ mota",
+                        "#text": "4 %, BEZaren tasa oso txikitua"
+                    }
+                }
+            },
+            "deadlineSubmissionOffer": {
+                "@desc": "Eskaintzak edo parte hartzeko eskabideak aurkezteko muga-eguna",
+                "date": {
+                    "@desc": "Data",
+                    "#text": "2021/07/22 13:00"
+                },
+                "time": {
+                    "@desc": "Ordua",
+                    "#text": "13:00"
+                }
+            },
+            "escrowOpeningFormulas": {
+                "@desc": "Plikak irekitzea Gutun-azal bakarra",
+                "escrow": {
+                    "description": {
+                        "@desc": "Deskribapena",
+                        "#text": "Eskaintza ekonomiko"
+                    },
+                    "dateTime": {
+                        "date": {
+                            "@desc": "Irekitze-data",
+                            "#text": "2021/07/22 13:05"
+                        },
+                        "time": {
+                            "@desc": "Irekitze ordua",
+                            "#text": "13:05"
+                        }
+                    },
+                    "public": {
+                        "@desc": "Publikoa",
+                        "#text": "true"
+                    }
+                }
+            },
+            "systemsStreamliningRecruitment": {
+                "@desc": "Kontratazioa teknikoki arrazionalizatzeko sistemak",
+                "flag": [
+                    {
+                        "@id": "acuerdo_marco",
+                        "@desc": "Esparru-akordioa",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "sistema_dinamico",
+                        "@desc": "Eskuratzeko sistema dinamikoa",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contratacion_conjunta",
+                        "@desc": "Baterako kontratazioa",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "encargo_medios_propios",
+                        "@desc": "Baliabide propioei enkargatzea",
+                        "#text": "false"
+                    }
+                ]
+            },
+            "offersManagement": {
+                "@desc": "Enpresa lizitatzaileak",
+                "offerManagement": [
+                    {
+                        "name": {
+                            "@desc": "Izen soziala",
+                            "#text": "EUSKO PRINTING SERVICE, S.L."
+                        },
+                        "cif": {
+                            "@desc": "IFK",
+                            "#text": "B01141738"
+                        },
+                        "pyme": {
+                            "@desc": "ETEa da",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Egoitza soziala Europar Batasunean",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "NUTS kodea",
+                            "#text": "ES211"
+                        },
+                        "provincia": {
+                            "@desc": "Probintzia",
+                            "#text": "Araba/\u00c1lava"
+                        },
+                        "municipio": {
+                            "@desc": "Udalerria",
+                            "#text": "Vitoria-Gasteiz"
+                        },
+                        "address": {
+                            "@desc": "Posta-helbidea",
+                            "#text": "CALLE HERMINIO MADINAVEITIA, 18 - PABELL\u00d3N 3"
+                        },
+                        "postalCode": {
+                            "@desc": "Posta-kodea",
+                            "#text": "1.006"
+                        },
+                        "phone1": {
+                            "@desc": "1. telefonoa",
+                            "#text": "+34 945214300"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa ",
+                            "#text": "hola@epscomunicacion.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Erregistro-data",
+                            "#text": "2021/07/19"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Izen soziala",
+                            "#text": "ANTZA, S.A.L."
+                        },
+                        "cif": {
+                            "@desc": "IFK",
+                            "#text": "A20145496"
+                        },
+                        "pyme": {
+                            "@desc": "ETEa da",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Egoitza soziala Europar Batasunean",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "NUTS kodea",
+                            "#text": "ES212"
+                        },
+                        "provincia": {
+                            "@desc": "Probintzia",
+                            "#text": "Gipuzkoa"
+                        },
+                        "municipio": {
+                            "@desc": "Udalerria",
+                            "#text": "Lasarte-Oria"
+                        },
+                        "address": {
+                            "@desc": "Posta-helbidea",
+                            "#text": "Zirkuitu ibilbidea, 2"
+                        },
+                        "postalCode": {
+                            "@desc": "Posta-kodea",
+                            "#text": "20.160"
+                        },
+                        "phone1": {
+                            "@desc": "1. telefonoa",
+                            "#text": "+34 943371545"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa ",
+                            "#text": "info@antza.eus"
+                        },
+                        "registerDate": {
+                            "@desc": "Erregistro-data",
+                            "#text": "2021/07/19"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Izen soziala",
+                            "#text": "CENTRO GRAFICO GANBOA, S.L."
+                        },
+                        "cif": {
+                            "@desc": "IFK",
+                            "#text": "B20524203"
+                        },
+                        "pyme": {
+                            "@desc": "ETEa da",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Egoitza soziala Europar Batasunean",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "NUTS kodea",
+                            "#text": "ES212"
+                        },
+                        "provincia": {
+                            "@desc": "Probintzia",
+                            "#text": "Gipuzkoa"
+                        },
+                        "municipio": {
+                            "@desc": "Udalerria",
+                            "#text": "Andoain"
+                        },
+                        "address": {
+                            "@desc": "Posta-helbidea",
+                            "#text": "Pol\u00edgono borda-Berri, 2"
+                        },
+                        "postalCode": {
+                            "@desc": "Posta-kodea",
+                            "#text": "20.140"
+                        },
+                        "phone1": {
+                            "@desc": "1. telefonoa",
+                            "#text": "+34 943300688"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa ",
+                            "#text": "ganboa@ganboa.com"
+                        },
+                        "registerDate": {
+                            "@desc": "Erregistro-data",
+                            "#text": "2021/07/19"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Izen soziala",
+                            "#text": "SERVINFORM, S.A."
+                        },
+                        "cif": {
+                            "@desc": "IFK",
+                            "#text": "A41050980"
+                        },
+                        "tipoEni": {
+                            "@desc": "Sailkapena",
+                            "#text": "ENI"
+                        },
+                        "pyme": {
+                            "@desc": "ETEa da",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Egoitza soziala Europar Batasunean",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "NUTS kodea",
+                            "#text": "ES213"
+                        },
+                        "provincia": {
+                            "@desc": "Probintzia",
+                            "#text": "Bizkaia"
+                        },
+                        "municipio": {
+                            "@desc": "Udalerria",
+                            "#text": "Etxebarri"
+                        },
+                        "address": {
+                            "@desc": "Posta-helbidea",
+                            "#text": "48450"
+                        },
+                        "postalCode": {
+                            "@desc": "Posta-kodea",
+                            "#text": "48.450"
+                        },
+                        "phone1": {
+                            "@desc": "1. telefonoa",
+                            "#text": "+34 944129198"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa ",
+                            "#text": "jhelguera@servinform.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Erregistro-data",
+                            "#text": "2021/07/19"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Izen soziala",
+                            "#text": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
+                        },
+                        "cif": {
+                            "@desc": "IFK",
+                            "#text": "F48130975"
+                        },
+                        "pyme": {
+                            "@desc": "ETEa da",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Egoitza soziala Europar Batasunean",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "NUTS kodea",
+                            "#text": "ES213"
+                        },
+                        "provincia": {
+                            "@desc": "Probintzia",
+                            "#text": "Bizkaia"
+                        },
+                        "municipio": {
+                            "@desc": "Udalerria",
+                            "#text": "Bilbao"
+                        },
+                        "address": {
+                            "@desc": "Posta-helbidea",
+                            "#text": "Zurbaran 2-4 Bajo"
+                        },
+                        "postalCode": {
+                            "@desc": "Posta-kodea",
+                            "#text": "48.007"
+                        },
+                        "phone1": {
+                            "@desc": "1. telefonoa",
+                            "#text": "+34 944450100"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa ",
+                            "#text": "comercial@ipar.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Erregistro-data",
+                            "#text": "2021/07/19"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Izen soziala",
+                            "#text": "COMPOSICIONES RALI, S.A."
+                        },
+                        "cif": {
+                            "@desc": "IFK",
+                            "#text": "A48138655"
+                        },
+                        "pyme": {
+                            "@desc": "ETEa da",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Egoitza soziala Europar Batasunean",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "NUTS kodea",
+                            "#text": "ES213"
+                        },
+                        "provincia": {
+                            "@desc": "Probintzia",
+                            "#text": "Bizkaia"
+                        },
+                        "municipio": {
+                            "@desc": "Udalerria",
+                            "#text": "Bilbao"
+                        },
+                        "address": {
+                            "@desc": "Posta-helbidea",
+                            "#text": "Partic de Costa 12-7\u00ba"
+                        },
+                        "postalCode": {
+                            "@desc": "Posta-kodea",
+                            "#text": "48.010"
+                        },
+                        "phone1": {
+                            "@desc": "1. telefonoa",
+                            "#text": "+34 944432962"
+                        },
+                        "email": {
+                            "@desc": "Helbide elektronikoa ",
+                            "#text": "rali@rali.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Erregistro-data",
+                            "#text": "2021/07/19"
+                        }
+                    }
+                ]
+            },
+            "scheduledPublicationDate": {
+                "@desc": "Argitaratze-data",
+                "#text": "2021/09/10"
+            },
+            "resolutionFiles": {
+                "@desc": "Ebazpen-dokumentuak",
+                "file": {
+                    "name": {
+                        "@desc": "Fitxategiaren izena",
+                        "#text": "Resolucion N\u00ba 342 Ebazpena KM2019057_054.pdf"
+                    },
+                    "onclick": "descargarFichero('0901a0fe861aabde')",
+                    "fileType": {
+                        "@desc": "Fitxategi mota",
+                        "#text": "Behin betiko ebazpena - Adjudikazio-ebazpena"
+                    }
+                }
+            },
+            "minQuorumOpening": {
+                "@desc": "Irekitzeko gutxieneko quoruma",
+                "#text": "2"
+            },
+            "formalizations": {
+                "formalization": {
+                    "contractCode": {
+                        "@desc": "Kontratuaren kodea",
+                        "@url": "/ac70cPublicidadWar/busquedaContrato/detalleContratoOrigen/444979",
+                        "#text": "KM/2019/057/0541240_00000000000000000000001"
+                    },
+                    "state": {
+                        "@desc": "Kontratuaren egoera",
+                        "#text": "Betetzea"
+                    },
+                    "id": {
+                        "@desc": "IFK",
+                        "#text": "F48130975"
+                    },
+                    "businessName": {
+                        "@desc": "Izen soziala",
+                        "#text": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
+                    },
+                    "dateCompanySignature": {
+                        "@desc": "Enpres. sina. D/Formalizazioa",
+                        "#text": "2021/09/07"
+                    },
+                    "dateAdminSignature": {
+                        "@desc": "Admin. sina. D",
+                        "#text": "2021/09/09"
+                    },
+                    "contractFile": {
+                        "name": {
+                            "@desc": "Fitxategiaren izena",
+                            "#text": "Contrato-054--1631181752406-6020583.pdf"
+                        },
+                        "onclick": "descargarFichero('0901a0fe861df061')",
+                        "fileType": {
+                            "@desc": "Fitxategi mota",
+                            "#text": "Kontratua adjudikatzeko dokumentua"
+                        }
+                    }
+                }
+            },
+            "resolutions": {
+                "@desc": "Suntsiarazpena",
+                "resolution": {
+                    "ofertaAdjudicataria": {
+                        "@desc": "Esleipendunaren eskaintza",
+                        "#text": "Oinarrizko eskaintza"
+                    },
+                    "state": {
+                        "@desc": "Egoera",
+                        "#text": "Adjudikazioa"
+                    },
+                    "priceWithoutVAT": {
+                        "@desc": "Prezioa, BEZ gabe",
+                        "#text": "1.647"
+                    },
+                    "priceWithVAT": {
+                        "@desc": "Prezioa, BEZarekin",
+                        "#text": "1.713"
+                    },
+                    "term": {
+                        "@desc": "Epea (hilabeteak)",
+                        "#text": "1"
+                    },
+                    "adjInfo": {
+                        "@desc": "Adjudikazioa",
+                        "date": {
+                            "@desc": "Adjudikazioaren data",
+                            "#text": "2021/09/06"
+                        },
+                        "termType": {
+                            "@desc": "Epe-mota",
+                            "#text": "Egunak"
+                        },
+                        "term": {
+                            "@desc": "Epea",
+                            "#text": "22"
+                        },
+                        "initialDateTerm": {
+                            "@desc": "Epearen hasiera-data",
+                            "#text": "2021/09/07"
+                        },
+                        "licitorCompanies": {
+                            "@desc": "Enpresa esleipenduna",
+                            "licitorCompany": {
+                                "businessName": {
+                                    "@desc": "Sozietate-izena",
+                                    "#text": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
+                                },
+                                "businessCif": {
+                                    "@desc": "IFK",
+                                    "#text": "F48130975"
+                                },
+                                "budgetWithoutVAT": {
+                                    "@desc": "Prezioa, BEZ gabe",
+                                    "#text": "1.647"
+                                },
+                                "budgetWithVAT": {
+                                    "@desc": "Prezioa, BEZarekin",
+                                    "#text": "1.713"
+                                }
+                            }
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Gauzatze-leku nagusia EBn",
+                            "#text": "true"
+                        },
+                        "placeExecutionNUTS": {
+                            "@desc": "Gauzatze-leku nagusiaren NUTS kodeak",
+                            "placeExecution": {
+                                "@id": "ES211",
+                                "code": {
+                                    "@desc": "NUTS kodea",
+                                    "#text": "ES211"
+                                },
+                                "name": {
+                                    "@desc": "Deskribapena",
+                                    "#text": "Araba/\u00c1lava"
+                                },
+                                "main": {
+                                    "@desc": "Nagusia",
+                                    "#text": "true"
+                                }
+                            }
+                        },
+                        "outsourcing": {
+                            "@desc": "Litekeena da kontratua azpikontratatzea",
+                            "#text": "false"
+                        }
+                    }
+                }
+            },
+            "expFiles": {
+                "@desc": "Fitxategiak",
+                "file": [
+                    {
+                        "name": {
+                            "@desc": "Fitxategiaren izena",
+                            "#text": "Eskaintza eredua - modelo de oferta 115-11_21 -- 054.docx"
+                        },
+                        "onclick": "descargarFichero('0901a0fe85e7e026')",
+                        "fileType": {
+                            "@desc": "Fitxategi mota",
+                            "#text": "Proposamen ekonomikoaren eredua"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Fitxategiaren izena",
+                            "#text": "115-11621Plegua - Lehiaketarako.pdf"
+                        },
+                        "onclick": "descargarFichero('0901a0fe85e7e112')",
+                        "fileType": {
+                            "@desc": "Fitxategi mota",
+                            "#text": "Memoria teknikoa"
+                        }
+                    }
+                ]
+            },
+            "estimatedDateInvite": {
+                "@desc": "Lizitatzeko edo parte hartzeko gonbidenak aukeratutako hautagaiei bidaltzeko aurreikusitako data (prozedura irekietan izan ezik)",
+                "#text": "2021-07-22"
+            },
+            "biddersNumber": {
+                "@desc": "Aurkeztutako lizitatzaileen kop.",
+                "#text": "2"
+            },
+            "pymeNumOffers": {
+                "@desc": "Enpresa txiki eta ertainetatik jasotako eskaintzen kop.",
+                "#text": "2"
+            },
+            "otherEstatesNumOffers": {
+                "@desc": "EBko beste estatu kide batzuetatik jasotako eskaintzen kop.",
+                "#text": "0"
+            },
+            "thirdCountriesNumOffers": {
+                "@desc": "Hirugarren herrialdeetatik jasotako eskaintzen kop.",
+                "#text": "0"
+            },
+            "electronicallyNumOffers": {
+                "@desc": "Bide elektronikoz jasotako eskaintzen kop.",
+                "#text": "2"
+            },
+            "trazability": {
+                "@desc": "Trazabilitatea",
+                "#text": "/ac70cPublicidadWar/trazabilidad/233862?idioma=eu&R01HNoPortal=true"
+            },
+            "isPlazoCerrado": "false",
+            "isPreviousAnnouncement": "false",
+            "groupedAnnouncement": "false"
+        }
+    },
+    "id": "233862"
+}

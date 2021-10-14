@@ -1,0 +1,1264 @@
+{
+    "contractingAnnouncement": {
+        "@id": "expjaso233862",
+        "@lang": "es",
+        "url": "/w32-content/es/contenidos/anuncio_contratacion/expjaso233862/es/expjaso233862.html",
+        "language": "es",
+        "contracting": {
+            "@id": "589873",
+            "idExpOrigen": {
+                "@desc": "Expediente",
+                "#text": "233862"
+            },
+            "logo": "/contenidos/poder_adjudicador/poder1/es_doc/images/w32_logoGobiernoVasco.gif",
+            "pdf": {
+                "@desc": "Imprimir",
+                "#text": "/contenidos/anuncio_contratacion/expjaso233862/es_doc/adjuntos/fichaExpediente.pdf"
+            },
+            "sello": {
+                "@desc": "Sello de Tiempo",
+                "#text": "/ac70cPublicidadWar/sello/233862/es"
+            },
+            "urlTodosFicheros": {
+                "@desc": "Descarga de los ficheros",
+                "#text": "descargarFicheroPID(233862, 78)"
+            },
+            "urlFicherosModelo": {
+                "@desc": "Descargar los modelos",
+                "#text": "descargarFicheroPID(233862, 109)"
+            },
+            "urlSuscripciones": {
+                "@desc": "Suscribir alertas anuncio",
+                "#text": "/ac70cPublicidadWar/suscripcionAnuncios?origenPublicado=1&origenExpediente=233862"
+            },
+            "urlSuscripcionesPoder": "/ac70cPublicidadWar/suscripcionPoder/entrada/1",
+            "firstPublicationDate": {
+                "@desc": "Fecha de publicaci\u00f3n",
+                "#text": "10/09/2021 08:50"
+            },
+            "budgetEstimated": {
+                "@desc": "Valor estimado",
+                "#text": "2.596,15"
+            },
+            "budgetWithoutVAT": {
+                "@desc": "Presupuesto del contrato sin IVA",
+                "#text": "2.596,15"
+            },
+            "codExp": {
+                "@desc": "Expediente",
+                "#text": "KM/2019/057/054"
+            },
+            "budgetWithVAT": {
+                "@desc": "Presupuesto del contrato con IVA",
+                "#text": "2.700"
+            },
+            "contractPeriod": {
+                "@desc": "Plazo",
+                "#text": "22"
+            },
+            "contractPeriodType": {
+                "@id": "2",
+                "@desc": "Duraci\u00f3n del contrato",
+                "#text": "D\u00edas"
+            },
+            "offerMaintenancePeriodType": {
+                "@id": "4",
+                "@desc": "Plazo m\u00ednimo durante el cual el licitador estar\u00e1 obligado a mantener la oferta",
+                "#text": "Meses"
+            },
+            "offerMaintenancePeriod": {
+                "@desc": "(a partir de la recepci\u00f3n de ofertas)",
+                "#text": "2"
+            },
+            "processingStatus": {
+                "@id": "FO",
+                "@desc": "Estado de la tramitaci\u00f3n",
+                "#text": "Formalizado / En ejecuci\u00f3n"
+            },
+            "webPageTender": {
+                "@desc": "Direcci\u00f3n web de Licitaci\u00f3n electr\u00f3nica",
+                "#text": "https://www.contratacion.euskadi.eus/KPELicitacion"
+            },
+            "contractingAuthority": {
+                "@id": "1",
+                "name": {
+                    "@desc": "Poder adjudicador",
+                    "#text": "Gobierno Vasco"
+                },
+                "nutsCode": {
+                    "@desc": "C\u00f3digo NUTS",
+                    "#text": "ES21"
+                },
+                "address": {
+                    "@desc": "Direcci\u00f3n Postal",
+                    "#text": "Donostia-San Sebasti\u00e1n, 1 01010 Vitoria-Gasteiz"
+                },
+                "webPage": {
+                    "@desc": "Direcci\u00f3n Web",
+                    "#text": "http://www.euskadi.eus"
+                }
+            },
+            "entityDriving": {
+                "@id": "1240",
+                "name": {
+                    "@desc": "Entidad impulsora",
+                    "#text": "S4833001C - Gobernanza P\u00fablica y Autogobierno"
+                },
+                "address": {
+                    "@desc": "Direcci\u00f3n Postal",
+                    "#text": "Donostia - San Sebasti\u00e1n, 101010 Vitoria - Gasteiz"
+                }
+            },
+            "contractingBody": {
+                "@id": "914249",
+                "name": {
+                    "@desc": "Organo contrataci\u00f3n",
+                    "#text": "Viceconsejer\u00eda de Administraci\u00f3n y Servicios Generales"
+                }
+            },
+            "technicalContactInfo": {
+                "@desc": "Contacto T\u00e9cnico",
+                "info": {
+                    "name": {
+                        "@desc": "Nombre y Apellidos",
+                        "#text": "-Irune Zumalde"
+                    },
+                    "address": {
+                        "@desc": "Direcci\u00f3n",
+                        "#text": "Donostia - San Sebasti\u00e1n, 101010 Vitoria - Gasteiz"
+                    },
+                    "webPage": {
+                        "@desc": "Direcci\u00f3n Web",
+                        "#text": "https://www.contratacion.euskadi.eus"
+                    },
+                    "email": {
+                        "@desc": "Email",
+                        "#text": "i-zumalde@euskadi.eus"
+                    },
+                    "phone": {
+                        "@desc": "Tel\u00e9fono",
+                        "#text": "+34 945018558"
+                    }
+                }
+            },
+            "adminContactInfo": {
+                "@desc": "Contacto Administrativo",
+                "info": {
+                    "name": {
+                        "@desc": "Nombre y Apellidos",
+                        "#text": "Marian Esteban"
+                    },
+                    "address": {
+                        "@desc": "Direcci\u00f3n",
+                        "#text": "Donostia-San Sebasti\u00e1n, 1 01010 Vitoria-Gasteiz"
+                    },
+                    "email": {
+                        "@desc": "Email",
+                        "#text": "a-estebanroyo@euskadi.eus"
+                    },
+                    "phone": {
+                        "@desc": "Tel\u00e9fono",
+                        "#text": "+34 945018823"
+                    }
+                }
+            },
+            "presentationPlaces": {
+                "@desc": "Lugar de presentacion de las ofertas o solicitudes de participacion",
+                "placeInfo": {
+                    "address": {
+                        "@desc": "Direcci\u00f3n",
+                        "#text": "Donostia - San Sebasti\u00e1n, 101010 Vitoria - Gasteiz"
+                    },
+                    "webPage": {
+                        "@desc": "Direcci\u00f3n Web",
+                        "#text": "https://www.contratacion.euskadi.eus"
+                    },
+                    "phone": {
+                        "@desc": "Tel\u00e9fono",
+                        "#text": "+34 945018558"
+                    }
+                }
+            },
+            "contractingTableComponents": {
+                "@desc": "Componente de la mesa/comit\u00e9",
+                "contact": [
+                    {
+                        "@id": "3874.0",
+                        "name": {
+                            "@desc": "Nombre",
+                            "#text": "Aitor Bilbao Uribarri"
+                        },
+                        "function": {
+                            "@desc": "Funci\u00f3n",
+                            "#text": "Idazkari"
+                        },
+                        "email": {
+                            "@desc": "Email",
+                            "#text": "a-bilbaouribarri@euskadi.eus"
+                        }
+                    },
+                    {
+                        "@id": "3875.0",
+                        "name": {
+                            "@desc": "Nombre",
+                            "#text": "Oihana Chantre Agirre"
+                        },
+                        "function": {
+                            "@desc": "Funci\u00f3n",
+                            "#text": "Ordezko"
+                        },
+                        "email": {
+                            "@desc": "Email",
+                            "#text": "o-chantre@euskadi.eus"
+                        }
+                    },
+                    {
+                        "@id": "3877.0",
+                        "name": {
+                            "@desc": "Nombre",
+                            "#text": "Marian Esteban Royo"
+                        },
+                        "function": {
+                            "@desc": "Funci\u00f3n",
+                            "#text": "Besterik"
+                        },
+                        "email": {
+                            "@desc": "Email",
+                            "#text": "a-estebanroyo@euskadi.eus"
+                        }
+                    },
+                    {
+                        "@id": "3876.0",
+                        "name": {
+                            "@desc": "Nombre",
+                            "#text": "Javier Dominguez Atxalandabaso"
+                        },
+                        "function": {
+                            "@desc": "Funci\u00f3n",
+                            "#text": "Besterik"
+                        },
+                        "email": {
+                            "@desc": "Email",
+                            "#text": "javier-dominguez@euskadi.eus"
+                        }
+                    }
+                ]
+            },
+            "documentAccessPeople": {
+                "@desc": "Otras personas con acceso a documentacion",
+                "contact": {
+                    "@id": "3878.0",
+                    "name": {
+                        "@desc": "Nombre",
+                        "#text": "Libe Urigoitia Capanaga"
+                    },
+                    "function": {
+                        "@desc": "Funci\u00f3n",
+                        "#text": "Besterik"
+                    },
+                    "email": {
+                        "@desc": "Email",
+                        "#text": "l-urigoitia@euskadi.eus"
+                    }
+                }
+            },
+            "resourceBodies": {
+                "@desc": "\u00d3rgano de recurso",
+                "resourceBody": {
+                    "name": {
+                        "@desc": "Descripci\u00f3n",
+                        "#text": "\u00d3rgano Administrativo de Recursos Contractuales"
+                    },
+                    "locality": {
+                        "@desc": "Localidad",
+                        "#text": "Vitoria-Gasteiz"
+                    },
+                    "email": {
+                        "@desc": "Email",
+                        "#text": "oarc@euskadi.eus"
+                    },
+                    "main": {
+                        "@desc": "Principal",
+                        "#text": "true"
+                    }
+                }
+            },
+            "contractingType": {
+                "@id": "2",
+                "@desc": "Tipo de contrato",
+                "#text": "Servicios"
+            },
+            "subject": {
+                "@desc": "Objeto del contrato",
+                "#text": "115-Trastornos del espectro autista:evidencia cient\u00edfica sobre la detecci\u00f3n, el diagn\u00f3stico y el tratamiento / 116-Eficiencia de la oxige\u00f3terapia de alto flujo para el tratamiento de dificultades respiratorias en Pediatr\u00eda"
+            },
+            "cpvs": {
+                "@desc": "CPV's",
+                "cpv": {
+                    "@id": "79800000-2",
+                    "name": {
+                        "@desc": "CPV",
+                        "#text": "Servicios de impresi\u00f3n y servicios conexos"
+                    },
+                    "main": {
+                        "@desc": "Principal",
+                        "#text": "true"
+                    }
+                }
+            },
+            "placeExecutionInEU": {
+                "@desc": "Lugar de ejecuci\u00f3n principal en la UE",
+                "#text": "true"
+            },
+            "placeExecutionNUTS": {
+                "@desc": "NUTS del lugar ejecuci\u00f3n principal",
+                "placeExecution": {
+                    "@id": "ES211",
+                    "code": {
+                        "@desc": "C\u00f3digo NUTS",
+                        "#text": "ES211"
+                    },
+                    "name": {
+                        "@desc": "Descripci\u00f3n",
+                        "#text": "Araba/\u00c1lava"
+                    },
+                    "main": {
+                        "@desc": "Principal",
+                        "#text": "true"
+                    }
+                }
+            },
+            "flags": {
+                "flag": [
+                    {
+                        "@id": "contrato_menor",
+                        "@desc": "Contrato menor",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contrato_covid19",
+                        "@desc": "Contrato en la gesti\u00f3n del Covid-19",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "plan_recuperacion",
+                        "@desc": "Plan de Recuperaci\u00f3n, Transformaci\u00f3n y Resiliencia",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "recurso",
+                        "@desc": "Recurso",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "licitacion_electronica",
+                        "@desc": "Licitaci\u00f3n electr\u00f3nica",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "licitacion_electronica_kontratazioa",
+                        "@desc": "Licitaci\u00f3n KPE",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "otros_compradores_sd",
+                        "@desc": "Otros compradores pueden utilizar el sistema din\u00e1mico de adquisici\u00f3n",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "central_compras",
+                        "@desc": "El contrato es adjudicado por una central de compras",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contrato_cubierto_acp",
+                        "@desc": "Contrato cubierto por el Acuerdo sobre Contrataci\u00f3n P\u00fablica (ACP)",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "division_lotes",
+                        "@desc": "Divisi\u00f3n en lotes",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "variantes",
+                        "@desc": "Se aceptan variantes",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "informe_opciones",
+                        "@desc": "Se aceptan opciones",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "precios_unitarios",
+                        "@desc": "Precios unitarios",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "prorroga",
+                        "@desc": "Pr\u00f3rrogas",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "reservado_profesion",
+                        "@desc": "La prestaci\u00f3n del servicio se reserva a una profesi\u00f3n concreta",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "situacion_economica_financiera",
+                        "@desc": "Solvencia econ\u00f3mica y financiera indicados en los pliegos de contrataci\u00f3n",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "capacidad_tecnica_profesional",
+                        "@desc": "Criterios de solvencia indicados en los pliegos de contrataci\u00f3n",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "subasta_electronica",
+                        "@desc": "Se utilizar\u00e1 subasta electr\u00f3nica",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "presentacion_ofertas_catalogo_electronico",
+                        "@desc": "Las ofertas deben presentarse en forma de cat\u00e1logos electr\u00f3nicos o incluir un cat\u00e1logo electr\u00f3nico",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "reservado_talleres",
+                        "@desc": "Reservado a talleres protegidos",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "programa_empleo",
+                        "@desc": "A ejecutar en un programa de empleo protegido",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "obligacion_nombres_cualificaciones",
+                        "@desc": "Obligaci\u00f3n de indicar los nombres y las cualificaciones profesionales del personal asignado a la ejecuci\u00f3n del contrato",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contrato_periodico",
+                        "@desc": "Se trata de contratos peri\u00f3dicos",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "pedido_electronico",
+                        "@desc": "Se utilizar\u00e1 el pedido electr\u00f3nico",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "facturacion_electronica",
+                        "@desc": "Se aceptar\u00e1 la facturaci\u00f3n electr\u00f3nica",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "pago_electronico",
+                        "@desc": "Se utilizar\u00e1 el pago electr\u00f3nico",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "financiado_ue",
+                        "@desc": "Financiado con fondos de la UE",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "garantia_provisional",
+                        "@desc": "Garant\u00eda provisional",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "garantia_definitiva",
+                        "@desc": "Garant\u00eda definitiva",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "publicar_perfil_contratante",
+                        "@desc": "Publicar en Perfil de Contratante",
+                        "#text": "true"
+                    },
+                    {
+                        "@id": "publicar_doue",
+                        "@desc": "Publicar autom\u00e1ticamente en el DOUE",
+                        "#text": "false"
+                    }
+                ]
+            },
+            "processing": {
+                "@id": "1",
+                "@desc": "Tramitaci\u00f3n",
+                "#text": "Ordinaria"
+            },
+            "adjudicationProcedure": {
+                "@id": "8",
+                "@desc": "Procedimiento de adjudicaci\u00f3n",
+                "#text": "Negociado Sin Publicidad"
+            },
+            "adjudicationCriteria": {
+                "@id": "2",
+                "@desc": "Criterios de adjudicaci\u00f3n",
+                "#text": "Mejor precio"
+            },
+            "languages": {
+                "@desc": "Lenguas en que pueden presentarse las ofertas o las solicitudes de participacion",
+                "language": [
+                    {
+                        "code": {
+                            "@desc": "Lenguaje",
+                            "#text": "ES"
+                        },
+                        "desc": {
+                            "@desc": "Descripci\u00f3n",
+                            "#text": "Espa\u00f1ol"
+                        }
+                    },
+                    {
+                        "code": {
+                            "@desc": "Lenguaje",
+                            "#text": "EU"
+                        },
+                        "desc": {
+                            "@desc": "Descripci\u00f3n",
+                            "#text": "Euskera"
+                        }
+                    }
+                ]
+            },
+            "authorityType": {
+                "@id": "3",
+                "@desc": "Tipo poder",
+                "#text": "Autoridad regional o local"
+            },
+            "mainActivity": {
+                "@id": "1",
+                "@desc": "Principal actividad",
+                "#text": "Servicios p\u00fablicos generales"
+            },
+            "communication": {
+                "@id": "1",
+                "@desc": "Comunicaci\u00f3n",
+                "#text": "Acceso libre, directo, completo y gratuito a los pliegos de la contrataci\u00f3n"
+            },
+            "justification": {
+                "@desc": "Justificaci\u00f3n",
+                "#text": "Al tratarse de un contrato derivado de un Acuerdo Marco no hay un procedimiento  negociado con publicidad"
+            },
+            "sheetModeAccess": {
+                "@desc": "Modo de acceso a los pliegos",
+                "#text": "https://www.contratacion.euskadi.eus/"
+            },
+            "legalProvisionReference": {
+                "@desc": "Referencia de la disposici\u00f3n legal, reglamentaria o administrativa correspondiente"
+            },
+            "descExtensions": {
+                "@desc": "Descripci\u00f3n de las pr\u00f3rrogas"
+            },
+            "descOptions": {
+                "@desc": "Descripci\u00f3n de las opciones"
+            },
+            "professionalQualification": {
+                "@desc": "Habilitaci\u00f3n para ejercer la actividad profesional, incluidos los requisitos relativos a la inscripci\u00f3n en un registro profesional o mercantil"
+            },
+            "economicSolvencyCriterion": {
+                "@desc": "Lista y breve descripci\u00f3n de los criterios de solvencia"
+            },
+            "minimumEconomicLevel": {
+                "@desc": "Nivel o niveles m\u00ednimos que pueden exigirse (en su caso)"
+            },
+            "technicalSolvencyCriterion": {
+                "@desc": "Lista y breve descripci\u00f3n de los criterios de solvencia"
+            },
+            "minimumTechnicalLevel": {
+                "@desc": "Nivel o niveles m\u00ednimos que pueden exigirse (en su caso)"
+            },
+            "specialClauses": {
+                "@desc": "Cl\u00e1usulas especiales",
+                "specialClause": [
+                    {
+                        "name": {
+                            "@desc": "Tipo",
+                            "#text": "Medioambientales"
+                        },
+                        "applicationSites": {
+                            "applicationSite": [
+                                {
+                                    "@desc": "Criterios de Adjudicaci\u00f3n",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Condiciones especiales de ejecuci\u00f3n",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Criterios de solvencia t\u00e9cnica",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Contratos reservados",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Otros",
+                                    "#text": "false"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Tipo",
+                            "#text": "Sociales"
+                        },
+                        "applicationSites": {
+                            "applicationSite": [
+                                {
+                                    "@desc": "Criterios de Adjudicaci\u00f3n",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Condiciones especiales de ejecuci\u00f3n",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Criterios de solvencia t\u00e9cnica",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Contratos reservados",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Otros",
+                                    "#text": "false"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Tipo",
+                            "#text": "Igualdad de Mujeres y Hombres"
+                        },
+                        "applicationSites": {
+                            "applicationSite": [
+                                {
+                                    "@desc": "Criterios de Adjudicaci\u00f3n",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Condiciones especiales de ejecuci\u00f3n",
+                                    "#text": "true"
+                                },
+                                {
+                                    "@desc": "Criterios de solvencia t\u00e9cnica",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Contratos reservados",
+                                    "#text": "false"
+                                },
+                                {
+                                    "@desc": "Otros",
+                                    "#text": "false"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "vats": {
+                "@desc": "IVA(s) del presupuesto del contrato",
+                "vat": {
+                    "@desc": "Texto descriptivo de prueba",
+                    "type": {
+                        "@desc": "Tipo de IVA",
+                        "#text": "4 %, tipo de IVA s\u00faper reducido"
+                    }
+                }
+            },
+            "deadlineSubmissionOffer": {
+                "@desc": "Fecha l\u00edmite de presentaci\u00f3n de ofertas o solicitudes de participaci\u00f3n",
+                "date": {
+                    "@desc": "Fecha",
+                    "#text": "22/07/2021 13:00"
+                },
+                "time": {
+                    "@desc": "Hora",
+                    "#text": "13:00"
+                }
+            },
+            "escrowOpeningFormulas": {
+                "@desc": "Apertura de plicas Sobre \u00fanico",
+                "escrow": {
+                    "description": {
+                        "@desc": "Descripci\u00f3n",
+                        "#text": "Oferta econ\u00f3mica"
+                    },
+                    "dateTime": {
+                        "date": {
+                            "@desc": "Fecha de apertura",
+                            "#text": "22/07/2021 13:05"
+                        },
+                        "time": {
+                            "@desc": "Hora de Apertura",
+                            "#text": "13:05"
+                        }
+                    },
+                    "public": {
+                        "@desc": "P\u00fablica",
+                        "#text": "true"
+                    }
+                }
+            },
+            "systemsStreamliningRecruitment": {
+                "@desc": "Sistemas para la racionalizaci\u00f3n de la contrataci\u00f3n",
+                "flag": [
+                    {
+                        "@id": "acuerdo_marco",
+                        "@desc": "Acuerdo Marco",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "sistema_dinamico",
+                        "@desc": "Sistema din\u00e1mico de adquisici\u00f3n",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "contratacion_conjunta",
+                        "@desc": "Contrataci\u00f3n conjunta",
+                        "#text": "false"
+                    },
+                    {
+                        "@id": "encargo_medios_propios",
+                        "@desc": "Encargo a medios propios",
+                        "#text": "false"
+                    }
+                ]
+            },
+            "offersManagement": {
+                "@desc": "Empresas Licitadoras",
+                "offerManagement": [
+                    {
+                        "name": {
+                            "@desc": "Raz\u00f3n Social",
+                            "#text": "EUSKO PRINTING SERVICE, S.L."
+                        },
+                        "cif": {
+                            "@desc": "CIF",
+                            "#text": "B01141738"
+                        },
+                        "pyme": {
+                            "@desc": "Es Pyme",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Sede Social Uni\u00f3n Europea",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "C\u00f3digo NUTS",
+                            "#text": "ES211"
+                        },
+                        "provincia": {
+                            "@desc": "Provincia",
+                            "#text": "Araba/\u00c1lava"
+                        },
+                        "municipio": {
+                            "@desc": "Municipio",
+                            "#text": "Vitoria-Gasteiz"
+                        },
+                        "address": {
+                            "@desc": "Direcci\u00f3n Postal",
+                            "#text": "CALLE HERMINIO MADINAVEITIA, 18 - PABELL\u00d3N 3"
+                        },
+                        "postalCode": {
+                            "@desc": "C\u00f3digo postal",
+                            "#text": "1.006"
+                        },
+                        "phone1": {
+                            "@desc": "Tel\u00e9fono 1",
+                            "#text": "+34 945214300"
+                        },
+                        "email": {
+                            "@desc": "Email ",
+                            "#text": "hola@epscomunicacion.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Fecha registro",
+                            "#text": "19/07/2021"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Raz\u00f3n Social",
+                            "#text": "ANTZA, S.A.L."
+                        },
+                        "cif": {
+                            "@desc": "CIF",
+                            "#text": "A20145496"
+                        },
+                        "pyme": {
+                            "@desc": "Es Pyme",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Sede Social Uni\u00f3n Europea",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "C\u00f3digo NUTS",
+                            "#text": "ES212"
+                        },
+                        "provincia": {
+                            "@desc": "Provincia",
+                            "#text": "Gipuzkoa"
+                        },
+                        "municipio": {
+                            "@desc": "Municipio",
+                            "#text": "Lasarte-Oria"
+                        },
+                        "address": {
+                            "@desc": "Direcci\u00f3n Postal",
+                            "#text": "Zirkuitu ibilbidea, 2"
+                        },
+                        "postalCode": {
+                            "@desc": "C\u00f3digo postal",
+                            "#text": "20.160"
+                        },
+                        "phone1": {
+                            "@desc": "Tel\u00e9fono 1",
+                            "#text": "+34 943371545"
+                        },
+                        "email": {
+                            "@desc": "Email ",
+                            "#text": "info@antza.eus"
+                        },
+                        "registerDate": {
+                            "@desc": "Fecha registro",
+                            "#text": "19/07/2021"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Raz\u00f3n Social",
+                            "#text": "CENTRO GRAFICO GANBOA, S.L."
+                        },
+                        "cif": {
+                            "@desc": "CIF",
+                            "#text": "B20524203"
+                        },
+                        "pyme": {
+                            "@desc": "Es Pyme",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Sede Social Uni\u00f3n Europea",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "C\u00f3digo NUTS",
+                            "#text": "ES212"
+                        },
+                        "provincia": {
+                            "@desc": "Provincia",
+                            "#text": "Gipuzkoa"
+                        },
+                        "municipio": {
+                            "@desc": "Municipio",
+                            "#text": "Andoain"
+                        },
+                        "address": {
+                            "@desc": "Direcci\u00f3n Postal",
+                            "#text": "Pol\u00edgono borda-Berri, 2"
+                        },
+                        "postalCode": {
+                            "@desc": "C\u00f3digo postal",
+                            "#text": "20.140"
+                        },
+                        "phone1": {
+                            "@desc": "Tel\u00e9fono 1",
+                            "#text": "+34 943300688"
+                        },
+                        "email": {
+                            "@desc": "Email ",
+                            "#text": "ganboa@ganboa.com"
+                        },
+                        "registerDate": {
+                            "@desc": "Fecha registro",
+                            "#text": "19/07/2021"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Raz\u00f3n Social",
+                            "#text": "SERVINFORM, S.A."
+                        },
+                        "cif": {
+                            "@desc": "CIF",
+                            "#text": "A41050980"
+                        },
+                        "tipoEni": {
+                            "@desc": "Clasificaci\u00f3n",
+                            "#text": "ENI"
+                        },
+                        "pyme": {
+                            "@desc": "Es Pyme",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Sede Social Uni\u00f3n Europea",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "C\u00f3digo NUTS",
+                            "#text": "ES213"
+                        },
+                        "provincia": {
+                            "@desc": "Provincia",
+                            "#text": "Bizkaia"
+                        },
+                        "municipio": {
+                            "@desc": "Municipio",
+                            "#text": "Etxebarri"
+                        },
+                        "address": {
+                            "@desc": "Direcci\u00f3n Postal",
+                            "#text": "48450"
+                        },
+                        "postalCode": {
+                            "@desc": "C\u00f3digo postal",
+                            "#text": "48.450"
+                        },
+                        "phone1": {
+                            "@desc": "Tel\u00e9fono 1",
+                            "#text": "+34 944129198"
+                        },
+                        "email": {
+                            "@desc": "Email ",
+                            "#text": "jhelguera@servinform.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Fecha registro",
+                            "#text": "19/07/2021"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Raz\u00f3n Social",
+                            "#text": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
+                        },
+                        "cif": {
+                            "@desc": "CIF",
+                            "#text": "F48130975"
+                        },
+                        "pyme": {
+                            "@desc": "Es Pyme",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Sede Social Uni\u00f3n Europea",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "C\u00f3digo NUTS",
+                            "#text": "ES213"
+                        },
+                        "provincia": {
+                            "@desc": "Provincia",
+                            "#text": "Bizkaia"
+                        },
+                        "municipio": {
+                            "@desc": "Municipio",
+                            "#text": "Bilbao"
+                        },
+                        "address": {
+                            "@desc": "Direcci\u00f3n Postal",
+                            "#text": "Zurbaran 2-4 Bajo"
+                        },
+                        "postalCode": {
+                            "@desc": "C\u00f3digo postal",
+                            "#text": "48.007"
+                        },
+                        "phone1": {
+                            "@desc": "Tel\u00e9fono 1",
+                            "#text": "+34 944450100"
+                        },
+                        "email": {
+                            "@desc": "Email ",
+                            "#text": "comercial@ipar.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Fecha registro",
+                            "#text": "19/07/2021"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Raz\u00f3n Social",
+                            "#text": "COMPOSICIONES RALI, S.A."
+                        },
+                        "cif": {
+                            "@desc": "CIF",
+                            "#text": "A48138655"
+                        },
+                        "pyme": {
+                            "@desc": "Es Pyme",
+                            "#text": "true"
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Sede Social Uni\u00f3n Europea",
+                            "#text": "true"
+                        },
+                        "codNuts": {
+                            "@desc": "C\u00f3digo NUTS",
+                            "#text": "ES213"
+                        },
+                        "provincia": {
+                            "@desc": "Provincia",
+                            "#text": "Bizkaia"
+                        },
+                        "municipio": {
+                            "@desc": "Municipio",
+                            "#text": "Bilbao"
+                        },
+                        "address": {
+                            "@desc": "Direcci\u00f3n Postal",
+                            "#text": "Partic de Costa 12-7\u00ba"
+                        },
+                        "postalCode": {
+                            "@desc": "C\u00f3digo postal",
+                            "#text": "48.010"
+                        },
+                        "phone1": {
+                            "@desc": "Tel\u00e9fono 1",
+                            "#text": "+34 944432962"
+                        },
+                        "email": {
+                            "@desc": "Email ",
+                            "#text": "rali@rali.es"
+                        },
+                        "registerDate": {
+                            "@desc": "Fecha registro",
+                            "#text": "19/07/2021"
+                        }
+                    }
+                ]
+            },
+            "scheduledPublicationDate": {
+                "@desc": "Fecha de publicaci\u00f3n",
+                "#text": "10/09/2021"
+            },
+            "resolutionFiles": {
+                "@desc": "Documentos resoluci\u00f3n",
+                "file": {
+                    "name": {
+                        "@desc": "Nombre del fichero",
+                        "#text": "Resolucion N\u00ba 342 Ebazpena KM2019057_054.pdf"
+                    },
+                    "onclick": "descargarFichero('0901a0fe861aabde')",
+                    "fileType": {
+                        "@desc": "Tipo de fichero",
+                        "#text": "Resolucion Definitiva - Resoluci\u00f3n de adjudicaci\u00f3n"
+                    }
+                }
+            },
+            "minQuorumOpening": {
+                "@desc": "Quorum minimo de apertura",
+                "#text": "2"
+            },
+            "formalizations": {
+                "formalization": {
+                    "contractCode": {
+                        "@desc": "C\u00f3digo del contrato",
+                        "@url": "/ac70cPublicidadWar/busquedaContrato/detalleContratoOrigen/444979",
+                        "#text": "KM/2019/057/0541240_00000000000000000000001"
+                    },
+                    "state": {
+                        "@desc": "Estado Contrato",
+                        "#text": "Ejecuci\u00f3n"
+                    },
+                    "id": {
+                        "@desc": "CIF",
+                        "#text": "F48130975"
+                    },
+                    "businessName": {
+                        "@desc": "Raz\u00f3n Social",
+                        "#text": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
+                    },
+                    "dateCompanySignature": {
+                        "@desc": "F. Firma Empresa / Formalizaci\u00f3n",
+                        "#text": "07/09/2021"
+                    },
+                    "dateAdminSignature": {
+                        "@desc": "F. Firma Admin.",
+                        "#text": "09/09/2021"
+                    },
+                    "contractFile": {
+                        "name": {
+                            "@desc": "Nombre del fichero",
+                            "#text": "Contrato-054--1631181752406-6020583.pdf"
+                        },
+                        "onclick": "descargarFichero('0901a0fe861df061')",
+                        "fileType": {
+                            "@desc": "Tipo de fichero",
+                            "#text": "Documento de adjudicaci\u00f3n contrato"
+                        }
+                    }
+                }
+            },
+            "resolutions": {
+                "@desc": "Resoluci\u00f3n",
+                "resolution": {
+                    "ofertaAdjudicataria": {
+                        "@desc": "Oferta Adjudicataria",
+                        "#text": "Oferta base"
+                    },
+                    "state": {
+                        "@desc": "Estado",
+                        "#text": "Adjudicaci\u00f3n"
+                    },
+                    "priceWithoutVAT": {
+                        "@desc": "Precio sin IVA",
+                        "#text": "1.647"
+                    },
+                    "priceWithVAT": {
+                        "@desc": "Precio con IVA",
+                        "#text": "1.713"
+                    },
+                    "term": {
+                        "@desc": "Plazo (meses)",
+                        "#text": "1"
+                    },
+                    "adjInfo": {
+                        "@desc": "Adjudicaci\u00f3n",
+                        "date": {
+                            "@desc": "Fecha adjudicaci\u00f3n",
+                            "#text": "06/09/2021"
+                        },
+                        "termType": {
+                            "@desc": "Tipo plazo",
+                            "#text": "D\u00edas"
+                        },
+                        "term": {
+                            "@desc": "Plazo",
+                            "#text": "22"
+                        },
+                        "initialDateTerm": {
+                            "@desc": "Fecha inicio plazo",
+                            "#text": "07/09/2021"
+                        },
+                        "licitorCompanies": {
+                            "@desc": "Empresa Adjudicataria",
+                            "licitorCompany": {
+                                "businessName": {
+                                    "@desc": "Raz\u00f3n social",
+                                    "#text": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
+                                },
+                                "businessCif": {
+                                    "@desc": "CIF",
+                                    "#text": "F48130975"
+                                },
+                                "budgetWithoutVAT": {
+                                    "@desc": "Precio sin IVA",
+                                    "#text": "1.647"
+                                },
+                                "budgetWithVAT": {
+                                    "@desc": "Precio con IVA",
+                                    "#text": "1.713"
+                                }
+                            }
+                        },
+                        "placeExecutionInEU": {
+                            "@desc": "Lugar de ejecuci\u00f3n principal en la UE",
+                            "#text": "true"
+                        },
+                        "placeExecutionNUTS": {
+                            "@desc": "NUTS del lugar ejecuci\u00f3n principal",
+                            "placeExecution": {
+                                "@id": "ES211",
+                                "code": {
+                                    "@desc": "C\u00f3digo NUTS",
+                                    "#text": "ES211"
+                                },
+                                "name": {
+                                    "@desc": "Descripci\u00f3n",
+                                    "#text": "Araba/\u00c1lava"
+                                },
+                                "main": {
+                                    "@desc": "Principal",
+                                    "#text": "true"
+                                }
+                            }
+                        },
+                        "outsourcing": {
+                            "@desc": "Es probable que el contrato sea objeto de subcontrataci\u00f3n",
+                            "#text": "false"
+                        }
+                    }
+                }
+            },
+            "expFiles": {
+                "@desc": "Ficheros",
+                "file": [
+                    {
+                        "name": {
+                            "@desc": "Nombre del fichero",
+                            "#text": "Eskaintza eredua - modelo de oferta 115-11_21 -- 054.docx"
+                        },
+                        "onclick": "descargarFichero('0901a0fe85e7e026')",
+                        "fileType": {
+                            "@desc": "Tipo de fichero",
+                            "#text": "Modelo de proposici\u00f3n economica"
+                        }
+                    },
+                    {
+                        "name": {
+                            "@desc": "Nombre del fichero",
+                            "#text": "115-11621Plegua - Lehiaketarako.pdf"
+                        },
+                        "onclick": "descargarFichero('0901a0fe85e7e112')",
+                        "fileType": {
+                            "@desc": "Tipo de fichero",
+                            "#text": "Memoria t\u00e9cnica"
+                        }
+                    }
+                ]
+            },
+            "estimatedDateInvite": {
+                "@desc": "Fecha estimada de env\u00edo a los candidatos seleccionados de las invitaciones a licitar o a participar (excepto en procedimientos abiertos)",
+                "#text": "2021-07-22"
+            },
+            "biddersNumber": {
+                "@desc": "N\u00ba de licitadores presentados",
+                "#text": "2"
+            },
+            "pymeNumOffers": {
+                "@desc": "N\u00ba de ofertas recibidas de pyme",
+                "#text": "2"
+            },
+            "otherEstatesNumOffers": {
+                "@desc": "N\u00ba de ofertas recibidas de otros Estados miembro de la UE",
+                "#text": "0"
+            },
+            "thirdCountriesNumOffers": {
+                "@desc": "N\u00ba de ofertas recibidas de terceros pa\u00edses",
+                "#text": "0"
+            },
+            "electronicallyNumOffers": {
+                "@desc": "N\u00ba de ofertas recibidas por v\u00eda electr\u00f3nica",
+                "#text": "2"
+            },
+            "trazability": {
+                "@desc": "Trazabilidad",
+                "#text": "/ac70cPublicidadWar/trazabilidad/233862?idioma=es&R01HNoPortal=true"
+            },
+            "isPlazoCerrado": "false",
+            "isPreviousAnnouncement": "false",
+            "groupedAnnouncement": "false"
+        }
+    },
+    "id": "233862"
+}

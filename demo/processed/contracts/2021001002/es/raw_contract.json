@@ -1,0 +1,228 @@
+{
+    "v79_idioma": "es",
+    "v79_idRec": "OSAKISAP2021001002",
+    "v79_rutaContenido": "/contenidos/anuncio_contratacion/OSAKISAP2021001002/es_OSAKISAP2021001002",
+    "v79_rutaPortalContenido": "/w32-kpeperfi/es/contenidos/anuncio_contratacion/OSAKISAP2021001002/es_OSAKISAP2021001002",
+    "contratacion": {
+        "contratacion_id_peticion": "445914",
+        "contratacion_tipo_anuncio": {
+            "codigo": "A",
+            "valor": "Anuncio"
+        },
+        "contratacion_titulo_contrato": "Instalaci\u00f3n central de alarma de incendios Zumarraga",
+        "contratacion_fecha_de_publicacion_documento": "21/04/2021 08:48:05",
+        "contratacion_expediente": "2021/01002",
+        "contratacion_presupuesto_contrato_cab": "338,11",
+        "contratacion_presupuesto_contrato_con_iva_cab": "409,11",
+        "contratacion_estado_tramitacion": {
+            "codigo": "AD",
+            "valor": "Adjudicaci\u00f3n"
+        },
+        "contratacion_publicar_perfil_contratante": "S\u00ed",
+        "contratacion_tamitacion_electronica": "S\u00ed",
+        "contratacion_ambito_geografico": {
+            "codigo": "1",
+            "valor": "CAPV"
+        },
+        "contratacion_poder_adjudicador": {
+            "codigo": "40",
+            "valor": "OSAKIDETZA - Servicio Vasco de Salud",
+            "contratacion_nifcif": "S5100023J",
+            "contratacion_codigo_nuts": "ES210",
+            "direccion_web": "http://www.osakidetza.euskadi.net",
+            "title": "Acceso a la ficha del poder adjudicador",
+            "url": "https://www.contratacion.euskadi.eus/w32-kpeperfi/es/contenidos/poder_adjudicador/poder40/es_doc/es_arch_poder40.html",
+            "logo": "/contenidos/anuncio_contratacion/exposakisap2021001002/es_doc/images/logo_oskidetza_30.pjpg"
+        },
+        "contratacion_entidad_impulsora": {
+            "codigo": "266",
+            "valor": "Red Salud Mental de Guipuzkoa",
+            "contratacion_nifcif": "S5100023J"
+        },
+        "contratacion_entidad_tramitadora": {
+            "codigo": "294",
+            "valor": "Red Salud Mental de Guipuzkoa"
+        },
+        "contratacion_organo_contratacion": {
+            "codigo": "911115",
+            "valor": "Director Gerente"
+        },
+        "contratacion_mesa_contratacion": {
+            "codigo": "1129",
+            "valor": "Mesa de Contrataci\u00f3n - Red Salud Mental de Guipuzkoa"
+        },
+        "contratacion_contacto_tecnico": {
+            "0": null
+        },
+        "contratacion_contacto_administrativo": {
+            "0": null
+        },
+        "contratacion_tipo_contrato": {
+            "codigo": "1",
+            "valor": "Obras"
+        },
+        "contratacion_objeto_contrato": "Instalaci\u00f3n central de alarma de incendios Zumarraga",
+        "contratacion_codigo_cpv": {
+            "0": {
+                "contratacion_cpv": "45312100-8",
+                "contratacion_desc_cpv": "Instalaci\u00f3n de sistemas de alarma contra incendios",
+                "principal": "TRUE"
+            }
+        },
+        "lugar_ejecucion_principal_europa": "S\u00ed",
+        "lugar_ejecucion_principal": {
+            "0": {
+                "codigo": "ES21",
+                "descripcion": "Pa\u00eds Vasco",
+                "principal": "TRUE"
+            }
+        },
+        "contratacion_division_lotes": "No",
+        "contratacion_lote": null,
+        "contratacion_valor_estimado": "338,11",
+        "contratacion_presupuesto_contrato": "338,11",
+        "contratacion_presupuesto_iva_contrato": "409,11",
+        "contratacion_num_licitadores": "1",
+        "contratacion_num_ofertas_pyme": "0",
+        "contratacion_num_ofertas_estado_ue": "0",
+        "contratacion_num_ofertas_otro_pais": "0",
+        "contratacion_num_ofertas_electronicas": "0",
+        "licitadores": null,
+        "contratacion_duracion_contrato_plazo_ejecucion": "Fecha inicio plazo: 20/04/2021   Fecha fin plazo: 30/06/2021",
+        "contratacion_tramitacion": {
+            "codigo": "1",
+            "valor": "Ordinaria"
+        },
+        "contratacion_procedimiento": {
+            "codigo": "10",
+            "valor": "Directo/Contrato Menor"
+        },
+        "contratacion_forma_tramitacion": {
+            "codigo": "3",
+            "valor": "Otros"
+        },
+        "contratacion_contrato_menor": "S\u00ed",
+        "contratacion_publicaciones_vacia": "No existe informaci\u00f3n para las publicaciones",
+        "contratacion_deposito_garantias": null,
+        "contratacion_aprobacion_expediente": {
+            "0": {
+                "nombre": "Informe de motivaci\u00f3n del contrato y resoluci\u00f3n de aprobaci\u00f3n del gasto-Resoluci\u00f3n aprobaci\u00f3n ga",
+                "formato": "PDF",
+                "tamano": "352",
+                "unidad": "KB",
+                "accion": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aMostrarAdjunto.do?idUnico=exposakisap2021001002&fichero=aprobacion_expediente1.pdf&tipoAnuncio=A&idOrigen=2021001002&origen=OSAKISAP&R01HNoPortal=true",
+                "url": "www.contratacion.euskadi.eus//w32-kpeperfi/es/r01CheckPubContent/contenidos/anuncio_contratacion/exposakisap2021001002/es_doc/adjuntos/aprobacion_expediente1.pdf"
+            }
+        },
+        "contratacion_resolucion": null,
+        "contratacion_fecha_adjudicacion_definitiva": "20/04/2021",
+        "contratacion_informe_adjudicacion_definitiva": {
+            "0": {
+                "fecha_inicio_plazo": "20/04/2021",
+                "tipo_plazo": "30/06/2021",
+                "empresa": "LIZURBIDE SEGURIDAD , S.L",
+                "precio": "338,11",
+                "precioIVA": "409,11",
+                "contratacion_adj_subcontra": "No"
+            }
+        },
+        "contratacion_desierto_vacio": "No existe informaci\u00f3n para los desiertos",
+        "contratacion_adjudicacion_desist_vacia": "No existe informaci\u00f3n para el desistimiento / renuncia",
+        "contratacion_resolucion_recurso_vacia": "No existe informaci\u00f3n para la resoluci\u00f3n de recurso",
+        "contratacion_formalizacion_contrato": {
+            "0": {
+                "empresa": "LIZURBIDE SEGURIDAD , S.L",
+                "fecha_firma": "20/04/2021"
+            }
+        },
+        "fecha_public_formalizacion": "21/04/2021",
+        "contratacion_clausulas_especiales_vacio": "No existe informaci\u00f3n para las cl\u00e1usulas especiales",
+        "contratacion_tablon_vacio": "No existe informaci\u00f3n para el tabl\u00f3n de anuncios",
+        "contratacion_anuncio_previo_vacio": "No existe informaci\u00f3n para el anuncio previo",
+        "contratacion_codice_leyenda_titulo": "CODICE 2.0-Componentes y Documentos Interoperables para la Contrataci\u00f3n Electr\u00f3nica",
+        "contratacion_codice_leyenda_parrafo1": "El proyecto CODICE es la soluci\u00f3n t\u00e9cnica que ha dado la Direcci\u00f3n de Patrimonio del Estado, para permitir la interoperabilidad de la Contrataci\u00f3n electr\u00f3nica a nivel nacional, europeo y mundial.",
+        "contratacion_codice_leyenda_parrafo2": "Est\u00e1 basado en est\u00e1ndares (UBL,UN/CEFAC).",
+        "contratacion_codice_leyenda_parrafo3": "Normaliza los procesos de contrataci\u00f3n electr\u00f3nica desde la publicaci\u00f3n del anuncio de informaci\u00f3n previa hasta la adjudicaci\u00f3n del contrato.",
+        "contratacion_codice_leyenda_parrafo4": "Contempla los procesos del negocio de la contrataci\u00f3n electr\u00f3nica.",
+        "contratacion_codice_leyenda_parrafo5": "Se basa en generar documentos para cada uno de estos procesos de negocio.",
+        "contratacion_codice_leyenda_parrafo6": "De conformidad con los procedimientos y prescripciones de la Directiva 2004/18.",
+        "contratacion_codice_vacio": "No existe informaci\u00f3n para el CODICE",
+        "recurso": "No",
+        "contratos": {
+            "0": {
+                "codContrato": "2021/01002266_00000000000000000000001",
+                "url_codContrato_revascon_a": "https://www.contratacion.euskadi.eus//w32-kpereva/es/y46aRevasconWar/datosContratosC/consultaPerfil?codContrato=2021/01002266_00000000000000000000001",
+                "empresaContrato": "LIZURBIDE SEGURIDAD , S.L"
+            }
+        },
+        "reservado_profesion": "No",
+        "financiado_ue": "No",
+        "otro_tipo_poder": "Ente P\u00fablico de Derecho Privado",
+        "principal_actividad": "Salud",
+        "central_compras": "No",
+        "reservado_talleres": "No",
+        "ejecutar_programa_empleo": "No",
+        "contratacion_historico_vacio": "No existen hist\u00f3ricos del anuncio"
+    },
+    "acciones": {
+        "comprobar_publicacion": {
+            "v79_Name": "Comprobar publicaci\u00f3n (p\u00e1gina nueva)",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aObtenerCertificado.do?tipoAnuncio=Anuncio&idOrigen=2021001002&origen=OSAKISAP&R01HNoPortal=true"
+        },
+        "comprobar_integridad": {
+            "v79_Name": "Comprobar integridad (p\u00e1gina nueva)",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aComprobarIntegridad.do?tipoAnuncio=Anuncio&idOrigen=2021001002&origen=OSAKISAP&R01HNoPortal=true"
+        },
+        "descargar_trazabilidad": {
+            "v79_Name": "Trazabilidad (p\u00e1gina nueva)",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aObtenerFicheroTrazabilidad.do?idioma=es&tipoAnuncio=Anuncio&idOrigen=2021001002&origen=OSAKISAP&R01HNoPortal=true"
+        },
+        "descargar_adjuntoszip": {
+            "v79_Name": "Todos los ficheros excepto los de tama\u00f1o superior a 15 MB (p\u00e1gina nueva)",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aDescargarZipAdjuntos.do?idioma=es&tipoAnuncio=A&idOrigen=2021001002&origen=OSAKISAP&idPeticion=445914&R01HNoPortal=true"
+        },
+        "comparar_anuncios": "https://www.contratacion.euskadi.eus/w32-kpeperfi/es/v79aWar/comunJSP/v79aPreparaExpedientes.do?R01HNoPortal=true",
+        "suscribir_alertas": {
+            "v79_Name": "Suscribir alertas anuncio",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aPreparaSuscribirseAlertas.do?origen=OSAKISAP&idOrigen=2021001002&tipoAnuncio=A"
+        },
+        "suscribir_alertas_poderadj": {
+            "v79_Name": "Suscribir alertas poder",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aPreparaSuscribirseAlertasPoderAdj.do?idPoderAdj=40"
+        },
+        "contratacion_imprimir_pdf": {
+            "v79_Name": "Imprimir",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aImprimirPDF.do?tipoAnuncio=Anuncio&idOrigen=2021001002&origen=OSAKISAP&R01HNoPortal=true"
+        },
+        "contratacion_sello_tiempo": {
+            "v79_Name": "Sello de Tiempo (p\u00e1gina nueva)",
+            "v79_Url": "/w32-kpeperfi/es/v79aWar/comunJSP/v79aObtenerCertificado.do?idioma=es&tipoAnuncio=Anuncio&idOrigen=2021001002&origen=OSAKISAP&R01HNoPortal=true"
+        }
+    },
+    "contratacion_organismos": "Organismos",
+    "contratacion_objeto": "Objeto",
+    "datos_economicos": "Datos Econ\u00f3micos",
+    "publicaciones": "Publicaciones",
+    "contratacion_adjudicacion": "Adjudicaci\u00f3n",
+    "contratacion_adjudicacion_def": "Adjudicaci\u00f3n",
+    "contratacion_desierto": "Desierto",
+    "contratacion_desistimiento": "Desistimiento / Renuncia",
+    "contratacion_resolucion_recurso": "Resoluci\u00f3n de recurso",
+    "contratacion_formalizacion": "Formalizaci\u00f3n Contrato",
+    "contratacion_anuncio_previo": "Anuncio Previo",
+    "contratacion_clausulas_especiales": "Cl\u00e1usulas especiales",
+    "contratacion_tablon": "Tabl\u00f3n",
+    "contratacion_contratos": "Contrato",
+    "contratacion_historial": "Historial",
+    "contratacion_codice_pestania": "CODICE",
+    "contratacion_ver_ficha_completa": "Ver Ficha completa[+]",
+    "contratacion_ver_ficha_pestanas": "Ver Ficha en pesta\u00f1as[-]",
+    "contratacion_comparar": "Comparar",
+    "volver": "Volver",
+    "logo_contratacion": {
+        "logo": "https://www.contratacion.euskadi.eus/images/w32-kpelogo.png",
+        "title": "Acceso a la p\u00e1gina de inicio de Contrataci\u00f3n P\u00fablica en Euskadi",
+        "url": "https://www.contratacion.euskadi.eus/w32-kpeperfi/es"
+    },
+    "id": "2021001002"
+}

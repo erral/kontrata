@@ -36,7 +36,8 @@ Run each of the scripts of the pipeline.
 
 All the data produced in the 2nd step will be indexed in an [Elastic](https://www.elastic.co/es/) service. You will need such a service to run the indexing part.
 
-Have a look at the [sample elastic docker-compose installation](https://github.com/erral/kontrata-docker) that I am using on development.
+Have a look at the [sample elastic docker-compose installation](https://github.com/erral/kontrata-docker) that I am using on development. 
+
 
 ## Pipeline
 
@@ -65,6 +66,19 @@ Have a look at the [sample elastic docker-compose installation](https://github.c
 ## Work in progress
 
 This is a work in progress. The JSON file generated in the 2nd step (and then indexed in the 3rd step) is subject to change.
+
+## Demo content
+
+I have downloaded and processed all the data available on the 10th of october and make it available here, in case you do not want to wait to download all of them, I make them available here for anyone here:
+
+- [Full download of the contract files](https://nextcloud.erral.freemyip.com/index.php/s/sE6Bx99BckH8sZP): 2 XML files (one for data and another one for metadata) and a JSON file with the summary, one per language, a total of 6 files per contract. 665 MB in total.
+
+I have also processed all those files with the second script, and make it available here, in case you do not want to wait to process all of them (the process of the files takes usualy minutes). 
+
+- [Full download of the processed contract files](https://nextcloud.erral.freemyip.com/index.php/s/ccwRmXeNs83HYdW): 2 JSON files, one with the XML in raw JSON (unprocessed, just converted), and another one created after processing the previous one, one per language, a total of 4 files per contract. 286 MB in total.
+
+In the [demo](demo) folder you can find a extract of some contracts with the corresponding files.
+
 
 ## License
 
