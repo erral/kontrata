@@ -169,7 +169,12 @@ def process_contract(folder):
     if raw_contract_json:
         raw_contract_json["id"] = folder.split("/")[-2]
 
-        with open("{}/raw_contract.json".format(folder), "w") as fp:
+        try:
+            os.makedirs(f"processed/{folder}")
+        except FileExistsError:
+            pass
+
+        with open("processed/{}/raw_contract.json".format(folder), "w") as fp:
             json.dump(raw_contract_json, fp, indent=4)
 
         # We have 2 different formats for the data.xml file
@@ -179,7 +184,7 @@ def process_contract(folder):
         else:
             contract_json = post_process_old_contract(raw_contract_json)
 
-        with open("{}/contract.json".format(folder), "w") as fp:
+        with open("processed/{}/contract.json".format(folder), "w") as fp:
             json.dump(contract_json, fp, indent=4)
 
     else:
