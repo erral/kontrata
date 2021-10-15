@@ -6,7 +6,7 @@ import os
 
 ELASTIC_HOST = "localhost"
 ELASTIC_PORT = 9200
-ELASTIC_INDEX_ES = "contracts"
+ELASTIC_INDEX_ES = "contracts_es"
 ELASTIC_INDEX_EU = "contracts_eu"
 
 
