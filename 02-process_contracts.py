@@ -23,13 +23,45 @@ def process_contracts():
 
 
 def clean_float_value(value):
-    try:
+    # We have several cases here:
+    #         202.49
+    #   1.555.092
+    #       6.824,37
+    #         306
+    #     3844443
+    #      10.030,9
+    #       4.268.35
+    #
+    # we need to identify in which cases are we using '.' as a thousands
+    # separator, and in which a decimal separator
+    if value.find(".") != -1:
+        decimal_group = value.split(".")[-1]
+        if len(decimal_group) == 2:
+            # then . is being used as a decimal separator.
+            # We have a case in which . is used both as a decimal separator and a thousands
+            # separator
+            # so we merge all the groups except the first one, and then merge
+            # the last group using . as a decimal separator
+            integer_part = "".join(value.split(".")[:-1])
+            value = ".".join([integer_part, decimal_group])
+            return float(value)
+        else:
+            # then . is being used as a thousands separator.
+            # Let's remove it and replace , with . to make it a decimal separator
+            value = value.replace(".", "").replace(",", ".")
+            return float(value)
+    else:
+        # there is no . so replace , with . to make it a decimal separator
+        value = value.replace(",", ".")
         return float(value)
-    except:
-        return 0.0
 
 
 def clean_float_value_old_xml(value):
+    # Here in all cases . is used as a thousands separator, and , as a decimal separator
+    # 1.216.511,05
+    #     2.076,48
+    #       275
+    #
     try:
         new_value = value.replace(".", "").replace(",", ".")
         return float(new_value)
