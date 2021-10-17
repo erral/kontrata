@@ -41,7 +41,7 @@ Have a look at the [sample elastic docker-compose installation](https://github.c
 
 ## Pipeline
 
-1. 01-get_contracts.py
+1. step_01_get_contracts.py
 
 - Download the original contracts JSONP file
 - Cache the file
@@ -54,11 +54,11 @@ Have a look at the [sample elastic docker-compose installation](https://github.c
   - Download the metadata XML file
   - Create the contract JSON file
 
-2. 02-process_contracts.py
+2. step_02_process_contracts.py
 
 - Read the existing XML files for each contract and build a json file with the relevant data
 
-3. 03-index_contracts.py
+3. step_03_index_contracts.py
 
 - Index all contracts in elastic
 
