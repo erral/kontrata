@@ -2,11 +2,13 @@
 import codecs
 import json
 import os
-import xmltodict
-from utils import print_progress
+import re
+from xml.etree import ElementTree as ET
 from xml.parsers.expat import ExpatError
 
-from xml.etree import ElementTree as ET
+import xmltodict
+
+from utils import print_progress
 
 
 class WrongXMLFileFormat(Exception):
@@ -32,28 +34,16 @@ def clean_float_value(value):
     #      10.030,9
     #       4.268.35
     #
-    # we need to identify in which cases are we using '.' as a thousands
-    # separator, and in which a decimal separator
-    if value.find(".") != -1:
-        decimal_group = value.split(".")[-1]
-        if len(decimal_group) == 2:
-            # then . is being used as a decimal separator.
-            # We have a case in which . is used both as a decimal separator and a thousands
-            # separator
-            # so we merge all the groups except the first one, and then merge
-            # the last group using . as a decimal separator
-            integer_part = "".join(value.split(".")[:-1])
-            value = ".".join([integer_part, decimal_group])
-            return float(value)
-        else:
-            # then . is being used as a thousands separator.
-            # Let's remove it and replace , with . to make it a decimal separator
-            value = value.replace(".", "").replace(",", ".")
-            return float(value)
-    else:
-        # there is no . so replace , with . to make it a decimal separator
-        value = value.replace(",", ".")
-        return float(value)
+    # this will catch every entire number, except the decimal part
+    entires_re = r'^(\d*[\,\.]?\d{3})+'
+    entires = re.search(entires_re, value)
+    # this will catch any decimal part, if it comes
+    decimals_re = r'[\,\.]([0-9]{1,2})?$'
+    decimals = re.search(decimals_re, value)
+    value = re.sub("[^0-9]", "", entires.group(0)) + (decimals.group(0) if decimals else "")
+    # we replace the decimal separator , with . for safety
+    value = value.replace(",",".")
+    return float(value)
 
 
 def clean_float_value_old_xml(value):
