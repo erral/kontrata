@@ -41,6 +41,31 @@ class TestCleanFloatValue(unittest.TestCase):
         new_value = clean_float_value(value)
         self.assertEqual(new_value, 4268.35)
 
+    def test_crazy_comma_as_decimal_and_thousands(self):
+        value = "4,321,45"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 4321.45)
+
+    def test_million_with_decimals(self):
+        value = "1.216.511,05"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 1216511.05)
+
+    def test_with_one_decimal_number(self):
+        value = "2.076,4"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 2076.4)
+
+    def test_integer_no_thousands(self):
+        value = "275"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 275.0)
+
+    def test_integer_thousands_separator(self):
+        value = "1.025"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 1025.0)
+
 
 class TestCleanFloatValueOldXML(unittest.TestCase):
     def test_million_with_decimals(self):
