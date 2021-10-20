@@ -27,9 +27,9 @@ Run each of the scripts of the pipeline.
 
 ```
 
-./bin/python 01-get_contracts.py
-./bin/python 02-process_contracts.py
-./bin/python 03-index_contracts.py
+./bin/python step_01_get_contracts.py
+./bin/python step_02_process_contracts.py
+./bin/python step_03_index_contracts.py
 ```
 
 ## Elastic
