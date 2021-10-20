@@ -35,14 +35,16 @@ def clean_float_value(value):
     #       4.268.35
     #
     # this will catch every entire number, except the decimal part
-    entires_re = r'^(\d*[\,\.]?\d{3})+'
+    entires_re = r"^(\d*([\,\.]?\d{3})*)+"
     entires = re.search(entires_re, value)
     # this will catch any decimal part, if it comes
-    decimals_re = r'[\,\.]([0-9]{1,2})?$'
+    decimals_re = r"[\,\.]([0-9]{1,2})?$"
     decimals = re.search(decimals_re, value)
-    value = re.sub("[^0-9]", "", entires.group(0)) + (decimals.group(0) if decimals else "")
+    value = re.sub("[^0-9]", "", entires.group(0)) + (
+        decimals.group(0) if decimals else ""
+    )
     # we replace the decimal separator , with . for safety
-    value = value.replace(",",".")
+    value = value.replace(",", ".")
     return float(value)
 
 
