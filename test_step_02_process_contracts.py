@@ -66,6 +66,16 @@ class TestCleanFloatValue(unittest.TestCase):
         new_value = clean_float_value(value)
         self.assertEqual(new_value, 1025.0)
 
+    def test_ten_euros(self):
+        value = "10"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 10.0)
+
+    def test_one_euro(self):
+        value = "1"
+        new_value = clean_float_value(value)
+        self.assertEqual(new_value, 1.0)
+
 
 class TestCleanFloatValueOldXML(unittest.TestCase):
     def test_million_with_decimals(self):
