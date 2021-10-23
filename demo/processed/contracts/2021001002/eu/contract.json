@@ -1,11 +1,25 @@
 {
     "title": "Zumarragan suteen kontrako alarmaren instalazioa",
-    "authority": "",
-    "budget": 0,
-    "status": "",
-    "contract_type": "Obrak",
-    "processing_type": "Arrunta",
+    "authority": {
+        "name": "OSAKIDETZA - Euskal Osasun Zerbitzua",
+        "cif": "S5100023J"
+    },
+    "budget": 409.11,
+    "contract_type": {
+        "name": "Obrak",
+        "code": "1"
+    },
+    "processing_type": {
+        "name": "Arrunta",
+        "code": "1"
+    },
+    "adjudication_procedure": {
+        "name": "Zuzenekoa/Kontratu txikia",
+        "code": "10"
+    },
+    "minor_contract": true,
     "offerers": [],
+    "offerer_count": "1",
     "winner_0": {
         "cif": "",
         "name": "LIZURBIDE SEGURIDAD , S.L"
@@ -13,5 +27,6 @@
     "resolution_0": {
         "priceWithVAT": 409.11
     },
+    "adjudication_date": "2021-04-20",
     "id": "2021001002"
 }
