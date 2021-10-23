@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from step_02_process_contracts import clean_float_value
 from step_02_process_contracts import clean_float_value_old_xml
+from step_02_process_contracts import clean_date_value
 
 import unittest
 
@@ -107,6 +108,45 @@ class TestCleanFloatValueOldXML(unittest.TestCase):
         value = "1.025"
         new_value = clean_float_value_old_xml(value)
         self.assertEqual(new_value, 1025.0)
+
+
+class TestCleanDateValue(unittest.TestCase):
+    def test_es_date_with_slash_separator(self):
+        value = "01/01/2017"
+        new_value = clean_date_value(value)
+        self.assertEqual(new_value, "2017-01-01")
+
+    def test_eu_date_with_slash_separator(self):
+        value = "2021/01/01"
+        new_value = clean_date_value(value)
+        self.assertEqual(new_value, "2021-01-01")
+
+    def test_invalid_eu_date(self):
+        """ Year can not be less than 1000"""
+        value = "0099/01/25"
+        new_value = clean_date_value(value)
+        self.assertIsNone(new_value)
+
+    def test_invalid_es_date(self):
+        """ Year can not be less than 1000"""
+        value = "25/01/0099"
+        new_value = clean_date_value(value)
+        self.assertIsNone(new_value)
+
+    def test_empty_date(self):
+        value = ""
+        new_value = clean_date_value(value)
+        self.assertIsNone(new_value)
+
+    def test_giberish_date_is_none(self):
+        value = "giberish"
+        new_value = clean_date_value(value)
+        self.assertIsNone(new_value)
+
+    def test_none_date_is_none(self):
+        value = None
+        new_value = clean_date_value(value)
+        self.assertIsNone(new_value)
 
 
 if __name__ == "__main__":

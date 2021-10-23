@@ -1,80 +1,66 @@
 {
     "title": "115-Trastornos del espectro autista:evidencia cient\u00edfica sobre la detecci\u00f3n, el diagn\u00f3stico y el tratamiento / 116-Eficiencia de la oxige\u00f3terapia de alto flujo para el tratamiento de dificultades respiratorias en Pediatr\u00eda",
-    "authority": "Gobierno Vasco",
+    "authority": {
+        "name": "Gobierno Vasco",
+        "cif": ""
+    },
     "budget": 2700.0,
-    "status": "Formalizado / En ejecuci\u00f3n",
-    "contract_type": "Servicios",
-    "processing_type": "Ordinaria",
-    "adjudication_procedure": "Negociado Sin Publicidad",
-    "contrato_menor": "false",
-    "contrato_covid19": "false",
-    "plan_recuperacion": "false",
-    "recurso": "false",
-    "licitacion_electronica": "true",
-    "licitacion_electronica_kontratazioa": "true",
-    "otros_compradores_sd": "false",
-    "central_compras": "false",
-    "contrato_cubierto_acp": "false",
-    "division_lotes": "false",
-    "variantes": "false",
-    "informe_opciones": "false",
-    "precios_unitarios": "false",
-    "prorroga": "false",
-    "reservado_profesion": "false",
-    "situacion_economica_financiera": "true",
-    "capacidad_tecnica_profesional": "true",
-    "subasta_electronica": "false",
-    "presentacion_ofertas_catalogo_electronico": "false",
-    "reservado_talleres": "false",
-    "programa_empleo": "false",
-    "obligacion_nombres_cualificaciones": "false",
-    "contrato_periodico": "false",
-    "pedido_electronico": "false",
-    "facturacion_electronica": "false",
-    "pago_electronico": "false",
-    "financiado_ue": "false",
-    "garantia_provisional": "false",
-    "garantia_definitiva": "false",
-    "publicar_perfil_contratante": "true",
-    "publicar_doue": "false",
+    "status": {
+        "name": "Formalizado / En ejecuci\u00f3n",
+        "code": "FO"
+    },
+    "contract_type": {
+        "name": "Servicios",
+        "code": "2"
+    },
+    "processing_type": {
+        "name": "Ordinaria",
+        "code": "1"
+    },
+    "adjudication_procedure": {
+        "name": "Negociado Sin Publicidad",
+        "code": "8"
+    },
+    "minor_contract": false,
     "offerers": [
         {
             "name": "EUSKO PRINTING SERVICE, S.L.",
             "cif": "B01141738",
-            "sme": "true",
-            "date": "19/07/2021"
+            "sme": false,
+            "date": "2021-07-19"
         },
         {
             "name": "ANTZA, S.A.L.",
             "cif": "A20145496",
-            "sme": "true",
-            "date": "19/07/2021"
+            "sme": false,
+            "date": "2021-07-19"
         },
         {
             "name": "CENTRO GRAFICO GANBOA, S.L.",
             "cif": "B20524203",
-            "sme": "true",
-            "date": "19/07/2021"
+            "sme": false,
+            "date": "2021-07-19"
         },
         {
             "name": "SERVINFORM, S.A.",
             "cif": "A41050980",
-            "sme": "true",
-            "date": "19/07/2021"
+            "sme": false,
+            "date": "2021-07-19"
         },
         {
             "name": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP.",
             "cif": "F48130975",
-            "sme": "true",
-            "date": "19/07/2021"
+            "sme": false,
+            "date": "2021-07-19"
         },
         {
             "name": "COMPOSICIONES RALI, S.A.",
             "cif": "A48138655",
-            "sme": "true",
-            "date": "19/07/2021"
+            "sme": false,
+            "date": "2021-07-19"
         }
     ],
+    "offerer_count": "2",
     "winner_0": {
         "cif": "F48130975",
         "name": "FOTOCOMPOSICI\u00d3N IPAR, S. COOP."
@@ -82,5 +68,6 @@
     "resolution_0": {
         "priceWithVAT": 1713.0
     },
+    "adjudication_date": "2021-09-06",
     "id": "233862"
 }
