@@ -11,22 +11,19 @@ You need a recent python version, any version >= 3.7 will do.
 
 Clone this project and create a virtualenv inside it:
 
-``` 
-
+```shell
 python3 -m venv .
-
-``` 
+```
 
 Then install the required dependencies:
 
-``` 
+```shell
 ./bin/pip install -r requirements.txt
 ```
 
 Run each of the scripts of the pipeline.
 
-```
-
+```shell
 ./bin/python step_01_get_contracts.py
 ./bin/python step_02_process_contracts.py
 ./bin/python step_03_index_contracts.py
@@ -36,8 +33,18 @@ Run each of the scripts of the pipeline.
 
 All the data produced in the 2nd step will be indexed in an [Elastic](https://www.elastic.co/es/) service. You will need such a service to run the indexing part.
 
-Have a look at the [sample elastic docker-compose installation](https://github.com/erral/kontrata-docker) that I am using on development. 
+Have a look at the [sample elastic docker-compose installation](https://github.com/erral/kontrata-docker) that I am using on development.
 
+By default, the 3rd step script will try to index the files in an Elastic service running in localhost:9200. You may change this setting an environment var:
+
+```shell
+export ELASTIC_HOST=10.0.0.1 && python step_03_index_contracts.py
+```
+
+You have the following variables to customize this:
+
+- ELASTIC_HOST
+- ELASTIC_PORT
 
 ## Pipeline
 
@@ -62,7 +69,6 @@ Have a look at the [sample elastic docker-compose installation](https://github.c
 
 - Index all contracts in elastic
 
-
 ## Work in progress
 
 This is a work in progress. The JSON file generated in the 2nd step (and then indexed in the 3rd step) is subject to change.
@@ -73,12 +79,11 @@ I have downloaded and processed all the data available on the 10th of october an
 
 - [Full download of the contract files](https://nextcloud.erral.freemyip.com/index.php/s/sE6Bx99BckH8sZP): 2 XML files (one for data and another one for metadata) and a JSON file with the summary, one per language, a total of 6 files per contract. 665 MB in total.
 
-I have also processed all those files with the second script, and make it available here, in case you do not want to wait to process all of them (the process of the files takes usualy minutes). 
+I have also processed all those files with the second script, and make it available here, in case you do not want to wait to process all of them (the process of the files takes usualy minutes).
 
 - [Full download of the processed contract files](https://nextcloud.erral.freemyip.com/index.php/s/ccwRmXeNs83HYdW): 2 JSON files, one with the XML in raw JSON (unprocessed, just converted), and another one created after processing the previous one, one per language, a total of 4 files per contract. 286 MB in total.
 
 In the [demo](demo) folder you can find a extract of some contracts with the corresponding files.
-
 
 ## License
 
