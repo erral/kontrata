@@ -44,7 +44,7 @@ class ContractDownloader:
         self.update = update
 
     def get_contracts_from_json(self, language):
-        """ download, cache and extract values from the given JSON url"""
+        """download, cache and extract values from the given JSON url"""
         url = CONTRACT_URLS[self.year][language]
         filename = url.split("/")[-1]
 
@@ -57,8 +57,11 @@ class ContractDownloader:
             print(f"Downloading {url}")
             sock = requests.get(url)
             data = sock.text
+            if data.startswith("jsonCallback"):
+                data_json_txt = data.split("(", 1)[1].strip(");")  # convert to json
+            else:
+                data_json_txt = data
 
-            data_json_txt = data.split("(", 1)[1].strip(");")  # convert to json
             with open(f"cache/{self.year}/{language}/{filename}", "w") as cache_file:
                 cache_file.write(data_json_txt)
 
