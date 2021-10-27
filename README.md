@@ -24,10 +24,15 @@ Then install the required dependencies:
 Run each of the scripts of the pipeline.
 
 ```shell
-./bin/python step_01_get_contracts.py
-./bin/python step_02_process_contracts.py
-./bin/python step_03_index_contracts.py
+./bin/python step_00_cache_contracts_files.py # optional
+./bin/python step_01_get_contracts.py 2021
+./bin/python step_02_process_contracts.py 2021
+./bin/python step_03_index_contracts.py 2021
 ```
+
+The first script is optional, it just downloads the main files from the opendata portal and caches them locally.
+If you don't want to run them, just skip that part and run the step_01 script, it will download the requested year's file. I think
+that pre-caching files can speed up the download and processing time, because you can run several parallel downloads.
 
 ## Elastic
 
