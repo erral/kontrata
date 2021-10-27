@@ -78,30 +78,33 @@ class ContractDownloader:
         raise IDNotFoundError("Could not find contract ID")
 
     def parse_contract(self, contract_id, language, contract):
-        contract_base_url = f"contracts/{self.year}/{contract_id}/{language}"
-        os.makedirs(contract_base_url, exist_ok=True)
-        data_xml_url = contract["dataXML"]
-        metadata_xml_url = contract["metadataXML"]
+        if "dataXML" in contract and "metadataXML" in contract:
+            contract_base_url = f"contracts/{self.year}/{contract_id}/{language}"
+            os.makedirs(contract_base_url, exist_ok=True)
+            data_xml_url = contract["dataXML"]
+            metadata_xml_url = contract["metadataXML"]
 
-        if self.update or not os.path.exists(f"{contract_base_url}/data.xml"):
-            global REALLY_DOWNLOADED
-            REALLY_DOWNLOADED += 1
-            with requests.get(data_xml_url) as r:
-                if r.ok:
-                    with open(f"{contract_base_url}/data.xml", "wb") as f:
-                        f.write(r.content)
+            if self.update or not os.path.exists(f"{contract_base_url}/data.xml"):
+                global REALLY_DOWNLOADED
+                REALLY_DOWNLOADED += 1
+                with requests.get(data_xml_url) as r:
+                    if r.ok:
+                        with open(f"{contract_base_url}/data.xml", "wb") as f:
+                            f.write(r.content)
 
-        if self.update or not os.path.exists(f"{contract_base_url}/metadata.xml"):
-            with requests.get(metadata_xml_url) as r:
-                if r.ok:
-                    with open(f"{contract_base_url}/metadata.xml", "wb") as f:
-                        f.write(r.content)
+            if self.update or not os.path.exists(f"{contract_base_url}/metadata.xml"):
+                with requests.get(metadata_xml_url) as r:
+                    if r.ok:
+                        with open(f"{contract_base_url}/metadata.xml", "wb") as f:
+                            f.write(r.content)
 
-        contract["id"] = contract_id
+            contract["id"] = contract_id
 
-        if update or not os.path.exists(f"{contract_base_url}/data.json"):
-            with open(f"{contract_base_url}/data.json", "w") as f:
-                f.write(json.dumps(contract))
+            if update or not os.path.exists(f"{contract_base_url}/data.json"):
+                with open(f"{contract_base_url}/data.json", "w") as f:
+                    f.write(json.dumps(contract))
+        else:
+            print(f"{contract_id} is not correct")
 
     def build_contracts_dict(self, contracts, language):
 
