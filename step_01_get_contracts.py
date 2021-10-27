@@ -72,6 +72,9 @@ class ContractDownloader:
 
             return re.compile("[\d]+").search(zip_filename).group()
 
+        import uuid
+
+        return uuid.uuid4().hex
         raise IDNotFoundError("Could not find contract ID")
 
     def parse_contract(self, contract_id, language, contract):
