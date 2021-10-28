@@ -57,7 +57,7 @@ class ContractIndexer:
             for ok, action in streaming_bulk(
                 client=client,
                 index=get_elastic_config().get(f"index_{language}"),
-                actions=self.generate_actions("es"),
+                actions=self.generate_actions(language),
             ):
                 successes += ok
             print(f"Indexed {language}: {successes} items")
