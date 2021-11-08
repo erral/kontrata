@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import csv
 import argparse
 import codecs
 import datetime
@@ -106,6 +107,19 @@ class ContractProcessor:
         self.year = year
         self.contracts_folder = f"contracts/{year}"
         os.makedirs(f"processed/{self.contracts_folder}", exist_ok=True)
+        self.authorities = self._get_authorities_data()
+
+    def _get_authorities_data(self):
+        """load the contractors data from cache, and create a dict to have it available during the
+        processing process
+        """
+        contractors_data = {}
+        with open("cache/contractors.json") as fp:
+            contractors = json.load(fp)
+            for contractor in contractors:
+                contractors_data[contractor["codPerfil"]] = contractor
+
+        return contractors_data
 
     def process_contracts(self):
         for count, folder in enumerate(os.listdir(self.contracts_folder)):
@@ -117,6 +131,7 @@ class ContractProcessor:
                 pass
 
     def process_contract(self, folder):
+        language = folder.split("/")[-1]
         metadata_filename = f"{folder}/metadata.xml"
         data_filename = f"{folder}/data.xml"
         json_filename = f"{folder}/data.json"
@@ -137,6 +152,8 @@ class ContractProcessor:
                 contract_json = self.post_process_contract(raw_contract_json)
             else:
                 contract_json = self.post_process_old_contract(raw_contract_json)
+
+            contract_json = self.fix_authority_data(contract_json, language)
 
             with open(f"processed/{folder}/contract.json", "w") as fp:
                 json.dump(contract_json, fp, indent=4)
@@ -282,7 +299,8 @@ class ContractProcessor:
             contract.get("contractingAuthority", {}).get("name", {}).get("#text", "")
         )
         authority_cif = ""
-        authority_code = contract.get("contractingAuthority", {}).get("id", "")
+
+        authority_code = contract.get("contractingAuthority", {}).get("@id", "")
 
         contract_json["authority"] = {
             "name": authority_name,
@@ -436,6 +454,29 @@ class ContractProcessor:
                 return {key: value[0].text}
 
         return {}
+
+    def fix_authority_data(self, contract_json, language):
+        """some contracting authority data is wrong:
+            names are not named as in official names
+            no CIFs are present
+
+        In this method we try to fix it
+        """
+        authority_code = contract_json.get("authority", {}).get("code", "")
+        if authority_code:
+            authority_code = int(authority_code)
+            authority_data = self.authorities.get(authority_code, {})
+            if authority_data:
+                contract_json["authority"]["name"] = authority_data.get(
+                    "nombreLargo{}".format(language.capitalize())
+                )
+                contract_json["authority"]["fixed"] = True
+            else:
+                contract_json["authority"]["fixed"] = False
+        else:
+            contract_json["authority"]["fixed"] = False
+
+        return contract_json
 
 
 if __name__ == "__main__":
