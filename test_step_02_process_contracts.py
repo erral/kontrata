@@ -148,6 +148,11 @@ class TestCleanDateValue(unittest.TestCase):
         new_value = clean_date_value(value)
         self.assertIsNone(new_value)
 
+    def test_with_date_time(self):
+        value = "2020/11/17 09:40:38"
+        new_value = clean_date_value(value)
+        self.assertEqual(new_value, "2020-11-17")
+
 
 if __name__ == "__main__":
     unittest.main()

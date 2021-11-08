@@ -70,7 +70,9 @@ def clean_date_value(value):
     """
 
     if value and value.find("/") != -1:
-        date_parts = value.split("/")
+        # First remove the time part if present
+        value_str = value.split(" ")[0]
+        date_parts = value_str.split("/")
         if len(date_parts) == 3:
             try:
                 if date_parts[0].isdigit() and int(date_parts[0]) > 999:
