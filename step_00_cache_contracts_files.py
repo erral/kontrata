@@ -17,7 +17,9 @@ from utils import print_progress
 import argparse
 
 
-CONTRACTORS_URL = "https://www.contratacion.euskadi.eus/w32-kpeperfi/es/ac70cPublicidadWar/busquedaPoderAdjudicador/autocompletePoder?R01HNoPortal=true&q=&c=true&_=1631455831360"
+CONTRACTORS_URL_1 = "https://www.contratacion.euskadi.eus/w32-kpeperfi/es/ac70cPublicidadWar/busquedaPoderAdjudicador/autocompletePoder?R01HNoPortal=true&q=&c=true&_=1631455831360"
+CONTRACTORS_URL_2 = "https://www.contratacion.euskadi.eus/ac70cPublicidadWar/busquedaContrato/autocompleteObtenerPoderes?R01HNoPortal=true&q=&c=true&_=1636384471030"
+
 
 CONTRACT_URLS = {
     "2021": {
@@ -120,14 +122,20 @@ class ContractDownloader:
 
 def get_contractors():
     """ Download the list of contractors, with their codes and official names """
-    data = requests.get(CONTRACTORS_URL)
+    items = []
+    urls = [CONTRACTORS_URL_1, CONTRACTORS_URL_2]
+    for url in urls:
+        data = requests.get(url)
+        if data.ok:
+            items.extend(data.json())
+
     with open("cache/contractors.json", "w") as fp:
-        json.dump(data.json(), fp)
+        json.dump(items, fp)
 
 
 if __name__ == "__main__":
-    for year in CONTRACT_URLS.keys():
-        cd = ContractDownloader(year)
-        cd.get_contracts()
+    # for year in CONTRACT_URLS.keys():
+    #     cd = ContractDownloader(year)
+    #     cd.get_contracts()
 
     get_contractors()
