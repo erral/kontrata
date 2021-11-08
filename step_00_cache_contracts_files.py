@@ -17,6 +17,8 @@ from utils import print_progress
 import argparse
 
 
+CONTRACTORS_URL = "https://www.contratacion.euskadi.eus/w32-kpeperfi/es/ac70cPublicidadWar/busquedaPoderAdjudicador/autocompletePoder?R01HNoPortal=true&q=&c=true&_=1631455831360"
+
 CONTRACT_URLS = {
     "2021": {
         "es": "https://opendata.euskadi.eus/contenidos/ds_contrataciones/contrataciones_admin_2021/opendata/contratos.json",
@@ -116,7 +118,16 @@ class ContractDownloader:
         self.get_contracts_from_json("eu")
 
 
+def get_contractors():
+    """ Download the list of contractors, with their codes and official names """
+    data = requests.get(CONTRACTORS_URL)
+    with open("cache/contractors.json", "w") as fp:
+        json.dump(data.json(), fp)
+
+
 if __name__ == "__main__":
     for year in CONTRACT_URLS.keys():
         cd = ContractDownloader(year)
         cd.get_contracts()
+
+    get_contractors()

@@ -157,10 +157,13 @@ class ContractProcessor:
         ) or contract.get("contratacion_poder_adjudicador", {}).get(
             "contratacion_nifcif", ""
         )
-
+        authority_code = contract.get("contratacion_poder_adjudicador", {}).get(
+            "codigo", ""
+        )
         contract_json["authority"] = {
             "name": authority_name,
             "cif": authority_cif,
+            "code": authority_code,
         }
 
         contract_json["budget"] = clean_float_value(
@@ -279,9 +282,12 @@ class ContractProcessor:
             contract.get("contractingAuthority", {}).get("name", {}).get("#text", "")
         )
         authority_cif = ""
+        authority_code = contract.get("contractingAuthority", {}).get("id", "")
+
         contract_json["authority"] = {
             "name": authority_name,
             "cif": authority_cif,
+            "code": authority_code,
         }
         contract_json["budget"] = clean_float_value_old_xml(
             contract.get("budgetWithVAT", {}).get("#text", "0")
