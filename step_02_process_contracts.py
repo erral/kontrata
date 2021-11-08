@@ -156,6 +156,7 @@ class ContractProcessor:
                 contract_json = self.post_process_old_contract(raw_contract_json)
 
             contract_json = self.fix_authority_data(contract_json, language)
+            contract_json["year"] = self.year
 
             with open(f"processed/{folder}/contract.json", "w") as fp:
                 json.dump(contract_json, fp, indent=4)
