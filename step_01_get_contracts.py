@@ -21,6 +21,7 @@ from utils import print_progress
 
 LIMIT = 30
 
+
 REALLY_DOWNLOADED = 0
 COUNT = 0
 
@@ -125,7 +126,10 @@ class ContractDownloader:
 
     def parse_multilingual_contract(self, contract_id, contract):
         for language, contract_data in contract.items():
-            self.parse_contract(contract_id, language, contract_data)
+            try:
+                self.parse_contract(contract_id, language, contract_data)
+            except:
+                print(f"Error parsing contract: {contract_id}") 
 
     def get_contracts(self):
         contracts_es = self.get_contracts_from_json("es")
@@ -138,7 +142,9 @@ class ContractDownloader:
             self.parse_multilingual_contract(contract_id, contract)
             COUNT += 1
             print(f"Downloaded item count:  {COUNT}")
+            global REALLY_DOWNLOADED
             if REALLY_DOWNLOADED and REALLY_DOWNLOADED % LIMIT == 0:
+                REALLY_DOWNLOADED += 1
                 print("Sleeping for 10 seconds")
                 import time
 
