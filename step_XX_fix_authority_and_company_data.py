@@ -9,6 +9,8 @@ from thefuzz import fuzz, process
 
 from step_00_cache_contracts_files import CONTRACT_URLS
 
+from slugify import slugify
+
 
 class ContractProcessor:
     def __init__(self, year):
@@ -88,6 +90,7 @@ class ContractProcessor:
         contract["authority"]["name"] = self.find_correct_authority_name(
             contract, language
         )
+        contract["authory"]["slug"] = slugify(contract["authority"]["name"])
         # contract["authority"]["cif"] = self.find_correct_authority_cif(
         #     contract, language
         # )
@@ -128,6 +131,7 @@ class ContractProcessor:
         """ find the most similar name in the list of contract_companies using difflib and return the value of CIF"""
         name = company["name"]
         cif = company["cif"]
+        company["slug"] = slugify(name)
         if not cif:
             matches = process.extract(name, self.companies.keys())
             if matches and matches[0][1] > 90:
