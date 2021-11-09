@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-import csv
 import argparse
+import asyncio
 import codecs
+import csv
 import datetime
 import json
 import os
@@ -110,16 +111,22 @@ class ContractProcessor:
         self.contracts_folder = f"contracts/{year}"
         os.makedirs(f"processed/{self.contracts_folder}", exist_ok=True)
 
-    def process_contracts(self):
+    async def process_contracts(self):
+        print(f"Processing {self.contracts_folder}")
         for count, folder in enumerate(os.listdir(self.contracts_folder)):
             try:
-                self.process_contract(f"{self.contracts_folder}/{folder}/es")
-                self.process_contract(f"{self.contracts_folder}/{folder}/eu")
-                print(f"Processed {count} contracts")
+                asyncio.create_task(
+                    self.process_contract(f"{self.contracts_folder}/{folder}/es")
+                )
+                asyncio.create_task(
+                    self.process_contract(f"{self.contracts_folder}/{folder}/eu")
+                )
+                # print(f"Processed {count} contracts")
             except NotADirectoryError:
                 pass
 
-    def process_contract(self, folder):
+    async def process_contract(self, folder):
+        print(f"Processing: {folder}")
         metadata_filename = f"{folder}/metadata.xml"
         data_filename = f"{folder}/data.xml"
         json_filename = f"{folder}/data.json"
@@ -148,6 +155,7 @@ class ContractProcessor:
 
         else:
             print(f"File not found: {data_filename}")
+        print(f"Finished processing: {folder}")
 
     def post_process_old_contract(self, raw_contract_json):
         contract_json = {}
@@ -462,4 +470,4 @@ if __name__ == "__main__":
         )
     else:
         cp = ContractProcessor(year)
-        cp.process_contracts()
+        asyncio.run(cp.process_contracts())
