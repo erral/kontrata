@@ -101,18 +101,25 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Parse contracts and extract valuable information"
     )
-    parser.add_argument("year", help="Enter the year to parse")
+    parser.add_argument("--year", help="Enter the year to parse")
 
     myargs = parser.parse_args()
 
     year = myargs.year
 
-    if year not in CONTRACT_URLS.keys():
+    if year and year not in CONTRACT_URLS.keys():
         print(
             "Year must be one of the followings: {}".format(
                 ",".join(CONTRACT_URLS.keys())
             )
         )
     else:
-        cp = ContractProcessor(year)
-        cp.process_contracts()
+        if year is not None:
+            cp = ContractProcessor(year)
+            cp.process_contracts()
+        else:
+            for year in CONTRACT_URLS.keys():
+                print(f"Processing year {year}")
+                cp = ContractProcessor(year)
+                cp.process_contracts()
+                print(f"Done year {year}")
