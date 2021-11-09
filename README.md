@@ -23,12 +23,13 @@ Then install the required dependencies:
 
 Run each of the scripts of the pipeline.
 
-```shell
-./bin/python step_00_cache_contracts_files.py # optional
+````shell
+./bin/python step_00_cache_contracts_files.py
 ./bin/python step_01_get_contracts.py 2021
 ./bin/python step_02_process_contracts.py 2021
-./bin/python step_03_index_contracts.py 2021
-```
+./bin/python step_03_build_data_dicts.py 2021
+./bin/python step_04_fix_authority_and_company_data_async.py 2021
+./bin/python step_05_index_contracts.py 2021
 
 The first script is optional, it just downloads the main files from the opendata portal and caches them locally.
 If you don't want to run them, just skip that part and run the step_01 script, it will download the requested year's file. I think
@@ -44,7 +45,7 @@ By default, the 3rd step script will try to index the files in an Elastic servic
 
 ```shell
 export ELASTIC_HOST=10.0.0.1 && python step_03_index_contracts.py
-```
+````
 
 You have the following variables to customize this:
 
@@ -82,7 +83,7 @@ You have the following variables to customize this:
 
 - Try to fix, unify and calculate cifs and slugs for authority and companies
 
-4. step_05_index_contracts.py.py
+5. step_05_index_contracts.py
 
 - Index all contracts in elastic
 
