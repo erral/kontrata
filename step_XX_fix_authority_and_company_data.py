@@ -65,14 +65,17 @@ class ContractProcessor:
 
     def process_contract(self, folder):
         """ load the data for each contract, process it and write it back to the same file """
-        language = folder.split("/")[-1]
-        fp = open(f"{folder}/contract.json")
-        contract = json.load(fp)
-        fp.close()
-        contract = self.fix_contents(contract, language)
-        # fp = open(f"{folder}/contract.json", "w")
-        # json.dump(contract, fp, indent=4)
-        # fp.close()
+        try:
+            language = folder.split("/")[-1]
+            fp = open(f"{folder}/contract.json")
+            contract = json.load(fp)
+            fp.close()
+            contract = self.fix_contents(contract, language)
+            fp = open(f"{folder}/contract.json", "w")
+            json.dump(contract, fp, indent=4)
+            fp.close()
+        except FileNotFoundError:
+            pass
 
     def fix_contents(self, contract, language):
         """some contracting authority data is wrong:
