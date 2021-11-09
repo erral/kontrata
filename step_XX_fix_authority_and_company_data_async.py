@@ -60,14 +60,17 @@ class ContractProcessor:
         return companies_data
 
     async def process_contracts(self):
-        for i, folder in enumerate(os.listdir(self.contracts_folder)):
-            task_eu = asyncio.create_task(
-                self.process_contract(f"{self.contracts_folder}/{folder}/es")
-            )
-            task_es = asyncio.create_task(
-                self.process_contract(f"{self.contracts_folder}/{folder}/eu")
-            )
-            # print(f"Done contract {i}")
+        try:
+            for i, folder in enumerate(os.listdir(self.contracts_folder)):
+                task_eu = asyncio.create_task(
+                    self.process_contract(f"{self.contracts_folder}/{folder}/es")
+                )
+                task_es = asyncio.create_task(
+                    self.process_contract(f"{self.contracts_folder}/{folder}/eu")
+                )
+                # print(f"Done contract {i}")
+        except FileNotFoundError:
+            pass
 
     async def process_contract(self, folder):
         """ load the data for each contract, process it and write it back to the same file """
