@@ -72,18 +72,24 @@ class ContractIndexer:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Index contracts in Elastic")
-    parser.add_argument("year", help="Enter the year to parse")
+    parser.add_argument("--year", help="Enter the year to parse")
 
     myargs = parser.parse_args()
 
     year = myargs.year
 
-    if year not in CONTRACT_URLS.keys():
+    if year and year not in CONTRACT_URLS.keys():
         print(
             "Year must be one of the followings: {}".format(
                 ",".join(CONTRACT_URLS.keys())
             )
         )
-    else:
+    elif year:
         cp = ContractIndexer(year)
         cp.index_contracts()
+    else:
+        for year in CONTRACT_URLS.keys():
+            print(f"Processing year {year}")
+            cd = ContractIndexer(year)
+            cd.index_contracts()
+            print(f"Done year {year}")

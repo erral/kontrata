@@ -171,13 +171,12 @@ if __name__ == "__main__":
                 ",".join(CONTRACT_URLS.keys())
             )
         )
+    elif year is not None:
+        cp = ContractProcessor(year)
+        cp.process_contracts()
     else:
-        if year is not None:
+        for year in CONTRACT_URLS.keys():
+            print(f"Processing year {year}")
             cp = ContractProcessor(year)
-            cp.process_contracts()
-        else:
-            for year in CONTRACT_URLS.keys():
-                print(f"Processing year {year}")
-                cp = ContractProcessor(year)
-                asyncio.run(cp.process_contracts())
-                print(f"Done year {year}")
+            asyncio.run(cp.process_contracts())
+            print(f"Done year {year}")

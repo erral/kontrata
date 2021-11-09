@@ -25,11 +25,11 @@ Run each of the scripts of the pipeline.
 
 ````shell
 ./bin/python step_00_cache_contracts_files.py
-./bin/python step_01_get_contracts.py 2021
-./bin/python step_02_process_contracts.py 2021
-./bin/python step_03_build_data_dicts.py 2021
-./bin/python step_04_fix_authority_and_company_data_async.py 2021
-./bin/python step_05_index_contracts.py 2021
+./bin/python step_01_get_contracts.py --year 2021
+./bin/python step_02_process_contracts.py --year 2021
+./bin/python step_03_build_data_dicts.py
+./bin/python step_04_fix_authority_and_company_data_async.py --year 2021
+./bin/python step_05_index_contracts.py --year 2021
 
 The first script is optional, it just downloads the main files from the opendata portal and caches them locally.
 If you don't want to run them, just skip that part and run the step_01 script, it will download the requested year's file. I think

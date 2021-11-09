@@ -129,7 +129,7 @@ class ContractDownloader:
             try:
                 self.parse_contract(contract_id, language, contract_data)
             except:
-                print(f"Error parsing contract: {contract_id}") 
+                print(f"Error parsing contract: {contract_id}")
 
     def get_contracts(self):
         contracts_es = self.get_contracts_from_json("es")
@@ -155,7 +155,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Download contracts from the Euskadi Open Data portal"
     )
-    parser.add_argument("year", help="Enter the year to download")
+    parser.add_argument("--year", help="Enter the year to download")
     parser.add_argument(
         "--update",
         action="store_true",
@@ -166,12 +166,18 @@ if __name__ == "__main__":
     year = myargs.year
     update = myargs.update
 
-    if year not in CONTRACT_URLS.keys():
+    if year and year not in CONTRACT_URLS.keys():
         print(
             "Year must be one of the followings: {}".format(
                 ",".join(CONTRACT_URLS.keys())
             )
         )
-    else:
+    elif year:
         cd = ContractDownloader(year, update)
         cd.get_contracts()
+    else:
+        for year in CONTRACT_URLS.keys():
+            print(f"Processing year {year}")
+            cd = ContractDownloader(year)
+            cd.get_contracts()
+            print(f"Done year {year}")
