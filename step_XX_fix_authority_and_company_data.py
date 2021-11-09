@@ -132,16 +132,16 @@ class ContractProcessor:
         name = company["name"]
         cif = company["cif"]
         company["slug"] = slugify(name)
-        if not cif:
-            matches = process.extract(name, self.companies.keys())
-            if matches and matches[0][1] > 90:
-                found_match_name = matches[0][0]
-                found_match_company_name = self.companies[found_match_name]["name"]
-                found_match_company_cif = self.companies[found_match_name]["cif"]
-                print(
-                    f"Found match for: {name} -> {found_match_company_name} ({found_match_company_cif})"
-                )
-                return self.companies[found_match_name]
+        # if not cif:
+        #     matches = process.extract(name, self.companies.keys())
+        #     if matches and matches[0][1] > 90:
+        #         found_match_name = matches[0][0]
+        #         found_match_company_name = self.companies[found_match_name]["name"]
+        #         found_match_company_cif = self.companies[found_match_name]["cif"]
+        #         print(
+        #             f"Found match for: {name} -> {found_match_company_name} ({found_match_company_cif})"
+        #         )
+        #         return self.companies[found_match_name]
 
         return company
 
