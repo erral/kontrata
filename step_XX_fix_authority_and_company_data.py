@@ -60,10 +60,13 @@ class ContractProcessor:
         return companies_data
 
     def process_contracts(self):
-        for i, folder in enumerate(os.listdir(self.contracts_folder)):
-            self.process_contract(f"{self.contracts_folder}/{folder}/es")
-            self.process_contract(f"{self.contracts_folder}/{folder}/eu")
-            print(f"Done contract {i}")
+        try:
+            for i, folder in enumerate(os.listdir(self.contracts_folder)):
+                self.process_contract(f"{self.contracts_folder}/{folder}/es")
+                self.process_contract(f"{self.contracts_folder}/{folder}/eu")
+                print(f"Done contract {i}")
+        except FileNotFoundError:
+            pass
 
     def process_contract(self, folder):
         """ load the data for each contract, process it and write it back to the same file """
