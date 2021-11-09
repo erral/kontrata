@@ -90,7 +90,7 @@ class ContractProcessor:
         contract["authority"]["name"] = self.find_correct_authority_name(
             contract, language
         )
-        contract["authory"]["slug"] = slugify(contract["authority"]["name"])
+        contract["authority"]["slug"] = slugify(contract["authority"]["name"])
         # contract["authority"]["cif"] = self.find_correct_authority_cif(
         #     contract, language
         # )
