@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import argparse
+import asyncio
 import codecs
+import csv
 import datetime
 import json
 import os
@@ -69,7 +71,9 @@ def clean_date_value(value):
     """
 
     if value and value.find("/") != -1:
-        date_parts = value.split("/")
+        # First remove the time part if present
+        value_str = value.split(" ")[0]
+        date_parts = value_str.split("/")
         if len(date_parts) == 3:
             try:
                 if date_parts[0].isdigit() and int(date_parts[0]) > 999:
@@ -107,16 +111,22 @@ class ContractProcessor:
         self.contracts_folder = f"contracts/{year}"
         os.makedirs(f"processed/{self.contracts_folder}", exist_ok=True)
 
-    def process_contracts(self):
+    async def process_contracts(self):
+        print(f"Processing {self.contracts_folder}")
         for count, folder in enumerate(os.listdir(self.contracts_folder)):
             try:
-                self.process_contract(f"{self.contracts_folder}/{folder}/es")
-                self.process_contract(f"{self.contracts_folder}/{folder}/eu")
-                print(f"Processed {count} contracts")
+                asyncio.create_task(
+                    self.process_contract(f"{self.contracts_folder}/{folder}/es")
+                )
+                asyncio.create_task(
+                    self.process_contract(f"{self.contracts_folder}/{folder}/eu")
+                )
+                # print(f"Processed {count} contracts")
             except NotADirectoryError:
                 pass
 
-    def process_contract(self, folder):
+    async def process_contract(self, folder):
+        print(f"Processing: {folder}")
         metadata_filename = f"{folder}/metadata.xml"
         data_filename = f"{folder}/data.xml"
         json_filename = f"{folder}/data.json"
@@ -138,11 +148,14 @@ class ContractProcessor:
             else:
                 contract_json = self.post_process_old_contract(raw_contract_json)
 
+            contract_json["year"] = self.year
+
             with open(f"processed/{folder}/contract.json", "w") as fp:
                 json.dump(contract_json, fp, indent=4)
 
         else:
             print(f"File not found: {data_filename}")
+        print(f"Finished processing: {folder}")
 
     def post_process_old_contract(self, raw_contract_json):
         contract_json = {}
@@ -157,10 +170,13 @@ class ContractProcessor:
         ) or contract.get("contratacion_poder_adjudicador", {}).get(
             "contratacion_nifcif", ""
         )
-
+        authority_code = contract.get("contratacion_poder_adjudicador", {}).get(
+            "codigo", ""
+        )
         contract_json["authority"] = {
             "name": authority_name,
             "cif": authority_cif,
+            "code": authority_code,
         }
 
         contract_json["budget"] = clean_float_value(
@@ -279,9 +295,13 @@ class ContractProcessor:
             contract.get("contractingAuthority", {}).get("name", {}).get("#text", "")
         )
         authority_cif = ""
+
+        authority_code = contract.get("contractingAuthority", {}).get("@id", "")
+
         contract_json["authority"] = {
             "name": authority_name,
             "cif": authority_cif,
+            "code": authority_code,
         }
         contract_json["budget"] = clean_float_value_old_xml(
             contract.get("budgetWithVAT", {}).get("#text", "0")
@@ -450,4 +470,4 @@ if __name__ == "__main__":
         )
     else:
         cp = ContractProcessor(year)
-        cp.process_contracts()
+        asyncio.run(cp.process_contracts())

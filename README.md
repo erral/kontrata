@@ -53,6 +53,10 @@ You have the following variables to customize this:
 
 ## Pipeline
 
+0. step_00_cache_contracts_files.py (optional)
+
+- Download and cache the original JSON files
+
 1. step_01_get_contracts.py
 
 - Download the original contracts JSONP file
@@ -70,7 +74,15 @@ You have the following variables to customize this:
 
 - Read the existing XML files for each contract and build a json file with the relevant data
 
-3. step_03_index_contracts.py
+3. step_03_build_data_dicts.py
+
+- Build authority and company lists, to use them in the fixing process
+
+4. step_04_fix_authority_and_company_data_async.py
+
+- Try to fix, unify and calculate cifs and slugs for authority and companies
+
+4. step_05_index_contracts.py.py
 
 - Index all contracts in elastic
 
