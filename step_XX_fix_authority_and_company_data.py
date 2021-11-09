@@ -16,6 +16,7 @@ class ContractProcessor:
         self.contracts_folder = f"processed/contracts/{year}"
         self.authorities_cifs = self._get_authorities_cifs()
         self.authorities = self._get_authorities_data()
+        self.companies = self._get_companies_data()
 
     def _get_authorities_data(self):
         """load the contractors data from cache, and create a dict to have it available during the
@@ -44,6 +45,18 @@ class ContractProcessor:
 
         return contractors_data
 
+    def _get_companies_data(self):
+        """load the companies data from cache, and create a dict to have it available during the
+        processing process
+        """
+        companies_data = {}
+        with open("cache/companies.json") as fp:
+            companies = json.load(fp)
+            for company in companies.values():
+                companies_data[company["name"]] = company
+
+        return companies_data
+
     def process_contracts(self):
         for i, folder in enumerate(os.listdir(self.contracts_folder)):
             self.process_contract(f"{self.contracts_folder}/{folder}/es")
@@ -57,9 +70,9 @@ class ContractProcessor:
         contract = json.load(fp)
         fp.close()
         contract = self.fix_contents(contract, language)
-        fp = open(f"{folder}/contract.json", "w")
-        json.dump(contract, fp, indent=4)
-        fp.close()
+        # fp = open(f"{folder}/contract.json", "w")
+        # json.dump(contract, fp, indent=4)
+        # fp.close()
 
     def fix_contents(self, contract, language):
         """some contracting authority data is wrong:
@@ -69,12 +82,18 @@ class ContractProcessor:
         In this method we try to fix it
         """
 
-        contract["authority"]["name"] = self.find_correct_authority_name(
-            contract, language
-        )
-        contract["authority"]["cif"] = self.find_correct_authority_cif(
-            contract, language
-        )
+        # contract["authority"]["name"] = self.find_correct_authority_name(
+        #     contract, language
+        # )
+        # contract["authority"]["cif"] = self.find_correct_authority_cif(
+        #     contract, language
+        # )
+
+        for key, value in contract.items():
+            if key.startswith("winner_"):
+                contract[key] = self.find_correct_company(value)
+
+        return contract
 
     def find_correct_authority_name(self, contract_json, language):
         """ Using the authority code, get its correct name from the code -> authority dict"""
@@ -93,12 +112,29 @@ class ContractProcessor:
 
         matches = process.extract(name, self.authorities_cifs.keys())
         # matches = difflib.get_close_matches(name, self.authorities_cifs.keys())
-        if matches and matches[0][1] > 85:
+        if matches and matches[0][1] > 90:
             found_match_name = matches[0][0]
             found_match_cif = self.authorities_cifs[found_match_name]["CIF"]
             print(f"Found match for: {name} -> {found_match_name}")
             return found_match_cif
         return ""
+
+    def find_correct_company(self, company):
+        """ find the most similar name in the list of contract_companies using difflib and return the value of CIF"""
+        name = company["name"]
+        cif = company["cif"]
+        if not cif:
+            matches = process.extract(name, self.companies.keys())
+            if matches and matches[0][1] > 90:
+                found_match_name = matches[0][0]
+                found_match_company_name = self.companies[found_match_name]["name"]
+                found_match_company_cif = self.companies[found_match_name]["cif"]
+                print(
+                    f"Found match for: {name} -> {found_match_company_name} ({found_match_company_cif})"
+                )
+                return self.companies[found_match_name]
+
+        return company
 
 
 if __name__ == "__main__":
