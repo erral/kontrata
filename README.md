@@ -41,10 +41,10 @@ All the data produced in the 2nd step will be indexed in an [Elastic](https://ww
 
 Have a look at the [sample elastic docker-compose installation](https://github.com/erral/kontrata-docker) that I am using on development.
 
-By default, the 3rd step script will try to index the files in an Elastic service running in localhost:9200. You may change this setting an environment var:
+By default, the 5th step script will try to index the files in an Elastic service running in localhost:9200. You may change this setting an environment var:
 
 ```shell
-export ELASTIC_HOST=10.0.0.1 && python step_03_index_contracts.py
+export ELASTIC_HOST=10.0.0.1 && python step_05_index_contracts.py
 ````
 
 You have the following variables to customize this:
@@ -60,6 +60,9 @@ You have the following variables to customize this:
 
 1. step_01_get_contracts.py
 
+It has an optional parameter --year, to download contracts just from that year.
+It has an optional parameter --update, to signal if you want to update already downloaded files.
+
 - Download the original contracts JSONP file
 - Cache the file
 - Convert to JSON
@@ -73,6 +76,8 @@ You have the following variables to customize this:
 
 2. step_02_process_contracts.py
 
+It has an optional parameter --year, to download contracts just from that year.
+
 - Read the existing XML files for each contract and build a json file with the relevant data
 
 3. step_03_build_data_dicts.py
@@ -81,9 +86,13 @@ You have the following variables to customize this:
 
 4. step_04_fix_authority_and_company_data_async.py
 
+It has an optional parameter --year, to download contracts just from that year.
+
 - Try to fix, unify and calculate cifs and slugs for authority and companies
 
 5. step_05_index_contracts.py
+
+It has an optional parameter --year, to download contracts just from that year.
 
 - Index all contracts in elastic
 
