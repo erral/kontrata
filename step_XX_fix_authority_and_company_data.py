@@ -69,10 +69,14 @@ class ContractProcessor:
         In this method we try to fix it
         """
 
-        contract["authority"]["name"] = self.find_correct_name(contract, language)
-        contract["authority"]["cif"] = self.find_correct_cif(contract, language)
+        contract["authority"]["name"] = self.find_correct_authority_name(
+            contract, language
+        )
+        contract["authority"]["cif"] = self.find_correct_authority_cif(
+            contract, language
+        )
 
-    def find_correct_name(self, contract_json, language):
+    def find_correct_authority_name(self, contract_json, language):
         """ Using the authority code, get its correct name from the code -> authority dict"""
         authority_code = contract_json.get("authority", {}).get("code", "")
         if authority_code:
@@ -83,7 +87,7 @@ class ContractProcessor:
 
         return contract_json.get("authority", {}).get("name", "")
 
-    def find_correct_cif(self, contract, language):
+    def find_correct_authority_cif(self, contract, language):
         """ find the most similar name in the list of authority_cifs using difflib and return the value of CIF"""
         name = contract["authority"]["name"]
 
