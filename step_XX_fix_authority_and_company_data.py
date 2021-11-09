@@ -85,12 +85,14 @@ class ContractProcessor:
         In this method we try to fix it
         """
 
-        # contract["authority"]["name"] = self.find_correct_authority_name(
-        #     contract, language
-        # )
+        contract["authority"]["name"] = self.find_correct_authority_name(
+            contract, language
+        )
         # contract["authority"]["cif"] = self.find_correct_authority_cif(
         #     contract, language
         # )
+
+        # self.find_correct_authority_cif(contract, language)
 
         for key, value in contract.items():
             if key.startswith("winner_"):
