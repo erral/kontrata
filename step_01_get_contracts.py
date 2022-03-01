@@ -10,20 +10,35 @@ https://opendata.euskadi.eus/katalogoa/-/2021eko-kontratazio-administratiboak/
 """
 
 import argparse
+import asyncio
 import json
 import os
 import re
+from asyncio import Semaphore, gather, run, wait_for
+from random import randint
 
+import aiofiles
 import requests
+import tqdm
+import tqdm.asyncio
+from aiohttp.client import ClientSession
 
 from step_00_cache_contracts_files import CONTRACT_URLS
 from utils import print_progress
+
+# Mock a list of different pdfs to download
+
+
+MAX_TASKS = 5
+MAX_TIME = 10
 
 LIMIT = 30
 
 
 REALLY_DOWNLOADED = 0
 COUNT = 0
+
+ITEMS = []
 
 
 def merge_dicts(dict1, dict2):
@@ -40,7 +55,7 @@ class IDNotFoundError(Exception):
 
 
 class ContractDownloader:
-    def __init__(self, year, update):
+    def __init__(self, year, update=False):
         self.year = year
         self.update = update
 
@@ -52,18 +67,24 @@ class ContractDownloader:
         os.makedirs(f"cache/{self.year}/{language}", exist_ok=True)
 
         try:
-            with open(f"cache/{self.year}/{language}/{filename}", "r") as cache_file:
+            with open(
+                f"cache/{self.year}/{language}/{filename}", "r"
+            ) as cache_file:
                 return json.load(cache_file)
         except FileNotFoundError:
             print(f"Downloading {url}")
             sock = requests.get(url)
             data = sock.text
             if data.startswith("jsonCallback"):
-                data_json_txt = data.split("(", 1)[1].strip(");")  # convert to json
+                data_json_txt = data.split("(", 1)[1].strip(
+                    ");"
+                )  # convert to json
             else:
                 data_json_txt = data
 
-            with open(f"cache/{self.year}/{language}/{filename}", "w") as cache_file:
+            with open(
+                f"cache/{self.year}/{language}/{filename}", "w"
+            ) as cache_file:
                 cache_file.write(data_json_txt)
 
             print(f"File created cache/{self.year}/{language}/{filename}")
@@ -83,24 +104,42 @@ class ContractDownloader:
 
     def parse_contract(self, contract_id, language, contract):
         if "dataXML" in contract and "metadataXML" in contract:
-            contract_base_url = f"contracts/{self.year}/{contract_id}/{language}"
+            contract_base_url = (
+                f"contracts/{self.year}/{contract_id}/{language}"
+            )
             os.makedirs(contract_base_url, exist_ok=True)
             data_xml_url = contract["dataXML"]
             metadata_xml_url = contract["metadataXML"]
 
-            if self.update or not os.path.exists(f"{contract_base_url}/data.xml"):
-                global REALLY_DOWNLOADED
-                REALLY_DOWNLOADED += 1
-                with requests.get(data_xml_url) as r:
-                    if r.ok:
-                        with open(f"{contract_base_url}/data.xml", "wb") as f:
-                            f.write(r.content)
+            if self.update or not os.path.exists(
+                f"{contract_base_url}/data.xml"
+            ):
+                # global REALLY_DOWNLOADED
+                # REALLY_DOWNLOADED += 1
+                # with requests.get(data_xml_url) as r:
+                #     if r.ok:
+                #         with open(f"{contract_base_url}/data.xml", "wb") as f:
+                #             f.write(r.content)
+                ITEMS.append(
+                    {
+                        "url": data_xml_url,
+                        "file": f"{contract_base_url}/data.xml",
+                    }
+                )
 
-            if self.update or not os.path.exists(f"{contract_base_url}/metadata.xml"):
-                with requests.get(metadata_xml_url) as r:
-                    if r.ok:
-                        with open(f"{contract_base_url}/metadata.xml", "wb") as f:
-                            f.write(r.content)
+            if self.update or not os.path.exists(
+                f"{contract_base_url}/metadata.xml"
+            ):
+                # with requests.get(metadata_xml_url) as r:
+                #     if r.ok:
+                #         with open(f"{contract_base_url}/metadata.xml", "wb") as f:
+                #             f.write(r.content)
+                ITEMS.append(
+                    {
+                        "url": metadata_xml_url,
+                        "file": f"{contract_base_url}/metadata.xml",
+                    }
+                )
 
             contract["id"] = contract_id
 
@@ -138,17 +177,60 @@ class ContractDownloader:
 
         global COUNT
         COUNT = 0
-        for contract_id, contract in contracts.items():
+        for contract_id, contract in tqdm.tqdm(contracts.items()):
             self.parse_multilingual_contract(contract_id, contract)
-            COUNT += 1
-            print(f"Downloaded item count:  {COUNT}")
-            global REALLY_DOWNLOADED
-            if REALLY_DOWNLOADED and REALLY_DOWNLOADED % LIMIT == 0:
-                REALLY_DOWNLOADED += 1
-                print("Sleeping for 10 seconds")
-                import time
+            # COUNT += 1
+            # print(f"Downloaded item count:  {COUNT}")
+            # global REALLY_DOWNLOADED
+            # if REALLY_DOWNLOADED and REALLY_DOWNLOADED % LIMIT == 0:
+            #     REALLY_DOWNLOADED += 1
+            #     print("Sleeping for 10 seconds")
+            #     import time
 
-                time.sleep(10)
+            #     time.sleep(10)
+
+
+async def download(pdf_list):
+    tasks = []
+    sem = Semaphore(MAX_TASKS)
+
+    async with ClientSession() as sess:
+        for pdf_url in pdf_list:
+            tasks.append(
+                # Wait max 5 seconds for each download
+                # wait_for(
+                #     download_one(pdf_url, sess, sem),
+                #     timeout=MAX_TIME,
+                # )
+                download_one(pdf_url, sess, sem)
+            )
+
+        # return await gather(*tasks)
+        responses = [
+            await f
+            for f in tqdm.tqdm(asyncio.as_completed(tasks), total=len(tasks))
+        ]
+
+
+async def download_one(item, sess, sem):
+    url = item["url"]
+    dest_file = item["file"]
+    async with sem:
+        try:
+            # print(f"Downloading {url}")
+            async with sess.get(url) as res:
+                content = await res.read()
+
+            # Check everything went well
+            if res.status != 200:
+                # print(f"Download failed: {res.status}")
+                return
+
+            async with aiofiles.open(dest_file, "wb") as f:
+                await f.write(content)
+                # No need to use close(f) when using with statement
+        except:
+            print(f"Exception when downloading {url}")
 
 
 if __name__ == "__main__":
@@ -175,9 +257,16 @@ if __name__ == "__main__":
     elif year:
         cd = ContractDownloader(year, update)
         cd.get_contracts()
+        print(len(ITEMS), " items to download")
+        run(download(ITEMS))
     else:
+
         for year in CONTRACT_URLS.keys():
             print(f"Processing year {year}")
             cd = ContractDownloader(year)
             cd.get_contracts()
             print(f"Done year {year}")
+
+
+# if __name__ == "__main__":
+#     run(download(pdf_list))

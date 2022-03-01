@@ -7,7 +7,7 @@ This project has been inspired by [@JaimeObregon](https://twitter.com/JaimeObreg
 
 ## Install
 
-You need a recent python version, any version >= 3.7 will do.
+You need a recent python version, any version >= 3.8 will do.
 
 Clone this project and create a virtualenv inside it:
 
