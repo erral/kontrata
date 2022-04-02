@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import asyncio
 import argparse
 import json
 import os
@@ -45,11 +46,13 @@ class ContractIndexer:
         base_folder = f"processed/contracts/{year}"
         for folder in os.listdir(base_folder):
             if os.path.isdir(f"{base_folder}/{folder}/{language}"):
-                contract = self.get_contract(f"{base_folder}/{folder}/{language}")
+                contract = self.get_contract(
+                    f"{base_folder}/{folder}/{language}"
+                )
                 if contract:
                     yield contract
 
-    def index_contracts(self):
+    async def index_contracts(self):
         client = connect(get_elastic_config())
         for language in ["es", "eu"]:
             successes = 0
@@ -91,5 +94,5 @@ if __name__ == "__main__":
         for year in CONTRACT_URLS.keys():
             print(f"Processing year {year}")
             cd = ContractIndexer(year)
-            cd.index_contracts()
+            asyncio.run(cd.index_contracts())
             print(f"Done year {year}")
